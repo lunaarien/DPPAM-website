@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/home-bg.png'); /* Background image for entire page */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar-container {
+    padding: 25px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, 
+    #E8F6FF 21%,   
+    #B0E0FE 65%,  
+    #50CCFA 91%,  
+    #3AA7CF 100%  
+  );
+    padding: 10px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.ser {
+    color: #CF000A;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fy {
+    color: #4FA3E5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin-right: 70px;
+    gap: 40px; /* Reduced gap between navbar link boxes */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #262626;
+    font-size: 17px;
+    font-family: 'Abyssinica SIL', serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 8px; /* Reduced padding inside the navbar link */
+}
+
+.nav-links li a:hover {
+    color: #007BFF;
+}
+
+.hero {
+    display: flex;
+    justify-content: flex-start; /* Align the content to the left */
+    align-items: center; /* Center vertically */
+    height: 80vh; /* Full height of the viewport */
+    position: relative;
+    padding: 20px;
+}
+
+.hero-text {
+    max-width: 800px; /* Limit text width for better readability */
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 50px; /* Add some left margin to give space from the edge */
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight-red {
+    color: #CF000A;
+    font-weight: 900;
+    font-size: 55px;
+}
+
+.highlight-black {
+    color: rgb(31, 31, 31);
+    font-weight: 900;
+    font-size: 55px;
+}
+
+.highlight-blue {
+    color: #4FA3E5;
+    font-weight: 900;
+    font-size: 55px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #323232;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00A1E4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #85daff; 
+    color: #262626;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+/* Show the hamburger icon on smaller screens */
+@media screen and (max-width: 768px) {
+    body{
+        /*background-image: url('../img/logo.png');*/
+        background: none;
+    }
+
+    .logo-image {
+        width: 40px; 
+        height: 40px;
+    }
+    
+    .ser, .fy {
+        font-size: 15px; 
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        gap: 4px; /* Reduced gap between navbar link boxes for mobile */
+        padding: 10px;
+        background-color: rgba(211, 211, 211, 1); /* Box background color */
+        position: absolute; /* Position the box on top */
+        top: 65px; /* Adjust this value based on your navbar height */
+        left: 83%; /* Position box in the center */
+        transform: translateX(-50%); /* Offset to center the box */
+        width: 30%; /* Adjust width to make it fit nicely */
+        border-radius: 5px;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for the box */
+        transition: all 0.3s ease; /* Smooth transition when toggling */
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px 20px; 
+        position: relative; /* Make navbar position relative */
+        z-index: 10; /* Ensure the navbar stays in front */
+    }
+
+    .hero {
+        z-index: 1; /* Set hero section behind navbar */
+        height: 70vh; /* Full height of the viewport */
+        display: flex;
+        justify-content: center; /* Horizontally center content */
+        align-items: center; /* Vertically center content */
+        text-align: center;
+
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links li a {
+        font-size: 16px; /* Adjusted to a better font size for mobile */
+        padding: 5px 8px; /* Reduced padding for more compact look */
+    }
+
+    .logo {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    /* Adjust text size for hero section */
+    .hero-text h2 {
+        font-size: 2rem; /* Adjust heading size on smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Adjust paragraph size on smaller screens */
+    }
+
+    .hero-text {
+        max-width: 400px; /* Limit text width for better readability */
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 10px; /* Add some left margin to give space from the edge */
+    }
+
+    .highlight-red {
+        color: #CF000A;
+        font-weight: 900;
+        font-size: 40px;
+    }
+    
+    .highlight-black {
+        color: rgb(31, 31, 31);
+        font-weight: 900;
+        font-size: 40px;
+    }
+    
+    .highlight-blue {
+        color: #4FA3E5;
+        font-weight: 900;
+        font-size: 40px;
+    }
+
+    .btn {
+        font-size: 13px; /* Reduce button text size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+/* For very small screens (below 480px) */
+@media screen and (max-width: 480px) {
+    body{
+        /* background-image: url('../img/logo.png'); */
+        background: none;
+    }
+
+    .ser, .fy {
+        font-size: 16px; /* Further reduce text size */
+    }
+
+    .hero{
+        height: 70vh; /* Full height of the viewport */
+    }
+
+    .logo-image {
+        width: 35px; /* Further reduce logo size */
+        height: 35px;
+    }
+    
+    .nav-links li a {
+        font-size: 13px; /* Reduce font size for links */
+        padding: 4px 6px; /* Even more reduced padding for a compact look */
+    }
+
+    .navbar {
+        padding: 10px 15px; /* Adjust padding for very small screens */
+    }
+
+    /* Further reduce text size for hero section */
+    .hero-text h2 {
+        font-size: 20px; /* Further reduce heading size */
+    }
+
+    .hero-text p {
+        font-size: 10px; /* Further reduce paragraph size */
+    }
+
+    .btn {
+        font-size: 12px; /* Smaller button text */
+        padding: 6px 14px; /* Adjust button padding */
+    }
+}
