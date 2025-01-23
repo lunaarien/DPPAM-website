@@ -28,7 +28,7 @@
                 <li class="dropdown">
                     <a href="#about" class="dropdown-toggle">About Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="whoweare.html">Who We Are?</a></li>
+                        <li><a href="whoarewe.html">Who We Are?</a></li>
                         <li><a href="#mv">Mission & Vision</a></li>
                         <li><a href="#organization">Organization Profile</a></li>
                     </ul>
@@ -50,8 +50,9 @@
                         <li><a href="#guidelines">Elections Guidelines</a></li>
                     </ul>
                 </li>
-                <li><a href="#news">News & Updates</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="whoarewe.html">News & Updates</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
             </ul>
         </nav>
     </div>
@@ -189,9 +190,10 @@
             </div>
         </div>
     </section>
+
+    <?php include 'footer.php'; ?>
     
-    <script src="js/smoothScroll.js"></script>
     <script src="js/card-slider.js"></script>
-    <!--<script src-"js/smoothScroll.js"></script>-->
+    <script src="js/script.js"></script>
 </body>
 </html>
