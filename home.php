@@ -28,7 +28,7 @@
                 <li class="dropdown">
                     <a href="#about" class="dropdown-toggle">About Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="whoarewe.html">Who We Are?</a></li>
+                        <li><a href="about-us/whoarewe.php">Who We Are?</a></li>
                         <li><a href="#mv">Mission & Vision</a></li>
                         <li><a href="#organization">Organization Profile</a></li>
                     </ul>
