@@ -273,7 +273,106 @@ body {
     text-align: left;
 } */
 
+/* ABOUT US - WHO ARE WE */
 
+#whoarewerow{
+    height: 100vh;
+    width: 100%;
+    margin-top: 250px;
+}
+#whoarewerow h1 span{
+    color: red;
+}
+#whoarewerow h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+#whoarewerow p span{
+    color: #4995D1
+}
+#whoarewerow p{
+    font-size: 24px;
+    font-weight: 400;
+    text-align: justify;
+}
+.img-carousel {
+    width: 100%;
+    height: 400px;
+    position: relative; /* Ensures the images are positioned relative to this container */
+}
+
+.img-carousel img {
+    display: none; /* Hide all images by default */
+    width: inherit; /* Inherit width from the parent */
+    height: inherit; /* Inherit height from the parent */
+    object-fit: cover; /* Ensures the image fits properly */
+    position: absolute; /* Use absolute positioning within the carousel */
+}
+
+/* Example to make the active image visible */
+.img-carousel img[class="active"] {
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+@keyframes fadeIn{
+    from {opacity: .8}
+    to {opacity: 1}
+}
+#dots-nav{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center; /* Centers the dots */
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds spacing between the dots */
+}
+
+#dots-nav *{
+    z-index: 10;
+    background-color: #B6E3FE
+}
+#dots{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: gray; /* Default inactive dot color */
+    border-radius: 50%; /* Makes it a circle */
+    cursor: pointer; /* Changes the cursor to indicate it's interactive */
+    transition: background-color 0.3s;
+}
+
+#dots .active {
+    background-color: white; /* Color for the active dot */
+}
+
+#mission-vision{
+    height: 70vh;
+    width: 100%;
+}
+.card:hover{
+    background: #8cc6eb;
+    color:white;
+}
+.card{
+    transition: all 0.3s;
+}
+
+.card #h1-mission{
+    color: #CF000A
+}
+.card #h1-vision{
+    color: #000dc4;
+
+}
 /* ABOUT US - ORGANIZATION PROFILE */
 .organization {
     height: 100vh; 
