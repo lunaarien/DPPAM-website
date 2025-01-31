@@ -26,15 +26,15 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li class="dropdown">
-                    <a href="#about" class="dropdown-toggle">About Us <i class="fa fa-chevron-down"></i></a>
+                    <a href="#about" class="dropdown-toggles">About Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="whoarewe.php">Who We Are?</a></li>
-                        <li><a href="#mv">Mission & Vision</a></li>
-                        <li><a href="#organization">Organization Profile</a></li>
+                        <li><a href="whoarewe.php#whoarewe">Who We Are?</a></li>
+                        <li><a href="whoarewe.php#mission-vision">Mission & Vision</a></li>
+                        <li><a href="home.php#organization">Organization Profile</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#volunteers" class="dropdown-toggle">Volunteers<i class="fa fa-chevron-down"></i></a>
+                    <a href="#volunteers" class="dropdown-toggles">Volunteers<i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#upce">UPCE</a></li>
                         <li><a href="#vad">VAD</a></li>
@@ -44,7 +44,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">Resources<i class="fa fa-chevron-down"></i></a>
+                    <a href="#resources" class="dropdown-toggles">Resources<i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#guide">Volunteers Guide</a></li>
                         <li><a href="#guidelines">Elections Guidelines</a></li>
@@ -84,7 +84,7 @@
                     <span class="highlight-black1">to understand our</span><br>
                     <span class="highlight-black1">commitment to democracy.</span>
                 </h2>
-                <a href="#about" class="btn">LEARN MORE <i class="fa fa-arrow-right"></i></a>
+                <a href="whoarewe.php#mission-vision" class="btn">LEARN MORE <i class="fa fa-arrow-right"></i></a>
             </div>
     
             <div class="about-image">
@@ -191,7 +191,7 @@
         </div>
     </section>
 
-    <?php include 'footer.php'; ?>
+    <?php include 'footer2.php'; ?>
     
     <script src="js/card-slider.js"></script>
     <script src="js/script.js"></script>

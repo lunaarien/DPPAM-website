@@ -4,7 +4,7 @@
     <div class="row text-center text-md-start py-3 my-3">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
             <div class="logo-container">
-                <img class="logo" src="img/logo1.png" alt="DDPAM Logo">
+                <img class="logo-footer" src="img/logo1.png" alt="DDPAM Logo">
                 <h4>DDPAM</h4>
             </div>
         </div>

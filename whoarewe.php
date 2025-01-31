@@ -25,17 +25,17 @@
             </div>
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="home.php">Home</a></li>
                 <li class="dropdown">
-                    <a href="#about" class="dropdown-toggle">About Us <i class="fa fa-chevron-down"></i></a>
+                    <a href="home.php#about" class="dropdown-toggles">About Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="about-us/whoarewe.php">Who We Are?</a></li>
-                        <li><a href="#mv">Mission & Vision</a></li>
-                        <li><a href="#organization">Organization Profile</a></li>
+                        <li><a href="whoarewe.php#whoarewe">Who We Are?</a></li>
+                        <li><a href="whoarewe.php#mission-vision">Mission & Vision</a></li>
+                        <li><a href="home.php#organization">Organization Profile</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#volunteers" class="dropdown-toggle">Volunteers<i class="fa fa-chevron-down"></i></a>
+                    <a href="#volunteers" class="dropdown-toggles">Volunteers<i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#upce">UPCE</a></li>
                         <li><a href="#vad">VAD</a></li>
@@ -45,7 +45,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">Resources<i class="fa fa-chevron-down"></i></a>
+                    <a href="#resources" class="dropdown-toggles">Resources<i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#guide">Volunteers Guide</a></li>
                         <li><a href="#guidelines">Elections Guidelines</a></li>
@@ -58,6 +58,7 @@
         </nav>
     </div>
     <div class="container">
+        <section id="whoarewe">
         <div id="whoarewerow" class="row">
             <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
                 <h1><span>WHO</span> WE ARE?</h1>
@@ -77,30 +78,66 @@
                 </div>
             </div>
         </div>
-        <div id="mission-vision" class="row mt-6">
-            <div class="col-md-6">
-                <div class="card border-0 shadow rounded-5 p-3" id="mv-card">
-                <div class="card-body">
-                    <h1 class="card-title fw-bold" id="h1-mission">Mission</h1>
-                    <p class="card-text fs-4 fw-medium">PCNC is committed to enabling NGOs to amplify their mission through a credible and accessible accreditation system.</p>
+        </section>
+        <section id="mission-vision">
+            <div id="mis-vis" class="row mt-6">
+                
+                <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
+                    <div class="card border-0 shadow rounded-5 p-3" id="mv-card">
+                    <div class="card-body">
+                        <h1 class="card-title fw-bold" id="h1-mission">Mission</h1>
+                        <p class="card-text fs-4 fw-medium">PCNC is committed to enabling NGOs to amplify their mission through a credible and accessible accreditation system.</p>
+                    </div>
+                    </div>
                 </div>
+                <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
+                    <div class="card border-0 shadow rounded-5 p-3" id="mv-card">
+                    <div class="card-body">
+                        <h1 class="card-title fw-bold " id="h1-vision">Vision</h1>
+                        <p class="card-text fs-4 fw-medium">A trusted and self-regulating community of NGOs, participating effectively in development and nation-building.</p>
+                    </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card border-0 shadow rounded-5 p-3" id="mv-card">
-                <div class="card-body">
-                    <h1 class="card-title fw-bold " id="h1-vision">Vision</h1>
-                    <p class="card-text fs-4 fw-medium">A trusted and self-regulating community of NGOs, participating effectively in development and nation-building.</p>
-                </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
-
+    <div>
+        <?php include 'footer2.php'; ?>
+    </div>  
 </body>
 
-<?php include 'footer2.php'; ?>
 
+<!--<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+    dropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            let parentDropdown = this.parentElement;
+
+            // Close all other open dropdowns
+            document.querySelectorAll(".dropdown").forEach((dropdown) => {
+                if (dropdown !== parentDropdown) {
+                    dropdown.classList.remove("active");
+                }
+            });
+
+            // Toggle the clicked dropdown
+            parentDropdown.classList.toggle("active");
+        });
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".dropdown")) {
+            document.querySelectorAll(".dropdown").forEach((dropdown) => {
+                dropdown.classList.remove("active");
+            });
+        }
+    });
+});
+</script> -->
 <!--Image Carousel Script-->
 <script>
 
