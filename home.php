@@ -28,9 +28,9 @@
                 <li class="dropdown">
                     <a href="#about" class="dropdown-toggles">About Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="whoarewe.php#whoarewe">Who We Are?</a></li>
-                        <li><a href="whoarewe.php#mission-vision">Mission & Vision</a></li>
-                        <li><a href="home.php#organization">Organization Profile</a></li>
+                        <li><a href="whoarewe.php">Who We Are?</a></li>
+                        <li><a href="mission-vision.php">Mission & Vision</a></li>
+                        <li><a href="organization.php">Organization Profile</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -65,7 +65,7 @@
                 <span class="highlight-blue">HALALAN</span>
             </h2>
             <p>Welcome to the official website of <strong>Diocese of Caloocan Public and Political Affairs Ministry (DPPAM)</strong>. We are dedicated to empowering communities through active participation in free and fair elections. Be a Volunteer today and make a difference!</p>
-            <a href="#about" class="btn">BE A VOLUNTEER!</a>
+            <a href="#" class="btn">BE A VOLUNTEER!</a>
         </div>
     </section>
 
@@ -84,7 +84,7 @@
                     <span class="highlight-black1">to understand our</span><br>
                     <span class="highlight-black1">commitment to democracy.</span>
                 </h2>
-                <a href="whoarewe.php#mission-vision" class="btn">LEARN MORE <i class="fa fa-arrow-right"></i></a>
+                <a href="whoarewe.php" class="btn">LEARN MORE <i class="fa fa-arrow-right"></i></a>
             </div>
     
             <div class="about-image">

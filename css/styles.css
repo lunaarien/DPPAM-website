@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&family=Abyssinica+SIL&display=swap');
 
 html {
     scroll-behavior: smooth; 
@@ -273,116 +273,173 @@ body {
 } */
 
 
-/* ABOUT US - WHO ARE WE */
-
 #whoarewerow{
     height: 100vh;
+    background-color: #ffffff;
     display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
+    justify-content: flex-start;
+    align-items: center;
     padding: 20px;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.whoarewe-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    gap: 60px;
+    width: 100%;
+}
+
+.whoarewe-text-content {
+    max-width: 650px;
     text-align: left;
-    font-family: 'Poppins', sans-serif;
 }
-#whoarewerow h1 span{
-    color: red;
+
+.whoarewe-text-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
 }
-#whoarewerow h1 {
-    font-size: 50px;
-    font-weight: 700;
-    margin-bottom: 2rem;
+
+.highlight-smallblue { color: #4FA3E5; font-weight: 100; font-size: 1.3rem; }
+
+.whoarewe-text-content p {
+    font-size: 1.3rem;
+    line-height: 2;
+    margin-bottom: 15px;
+    color: #2e2e2e;
+    font-family: 'Abyssinica SIL', serif;
+    font-weight: 500;
 }
-#whoarewerow p span{
-    color: #4995D1
+
+.image-section {
+    max-width: 1000px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
-#whoarewerow p{
-    font-size: 24px;
-    font-weight: 400;
-    text-align: justify;
+
+.image-container {
+    max-width: 700px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
 }
+
 .img-carousel {
     width: 100%;
-    height: 400px;
-    position: relative; /* Ensures the images are positioned relative to this container */
+    height: 100%;
+    position: relative;
 }
 
 .img-carousel img {
-    display: none; /* Hide all images by default */
-    width: inherit; /* Inherit width from the parent */
-    height: inherit; /* Inherit height from the parent */
-    object-fit: cover; /* Ensures the image fits properly */
-    position: absolute; /* Use absolute positioning within the carousel */
-}
-
-/* Example to make the active image visible */
-.img-carousel img[class="active"] {
-    display: block;
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
-}
-@keyframes fadeIn{
-    from {opacity: .8}
-    to {opacity: 1}
-}
-#dots-nav{
-    width: inherit;
-    height: inherit;
-    display: flex;
-    justify-content: center; /* Centers the dots */
-    align-items: flex-end;
-    align-content: flex-end;
-    flex-wrap: wrap;
-    gap: 10px; /* Adds spacing between the dots */
-}
-
-#dots-nav *{
-    z-index: 10;
-    background-color: #B6E3FE
-}
-#dots{
-    display: flex;
-    justify-content: center;
+    display: none;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    border-radius: 20px;
 }
-#dots .dot {
-    width: 10px;
-    height: 10px;
-    margin: 10px;
-    background-color: gray; /* Default inactive dot color */
-    border-radius: 50%; /* Makes it a circle */
-    cursor: pointer; /* Changes the cursor to indicate it's interactive */
+
+.img-carousel img.active {
+    display: block;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+    padding: 0 10px; 
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px; 
+}
+
+.prev-btn, .next-btn {
+    background-color: transparent; 
+    color: rgb(49, 49, 49); 
+    border: none; 
+    padding: 5px 0px; 
+    cursor: pointer;
+    font-size: 20px; 
+    transition: color 0.3s ease; 
+}
+
+.prev-btn:hover, .next-btn:hover {
+    color: gray; 
+}
+
+#dots-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-#dots .active {
-    background-color: white; /* Color for the active dot */
+.dot.active {
+    background-color: #333;
 }
 
-#mis-vis{
-    height: 100vh; 
-    background-color: #ffffff;
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
-    padding: 20px;
+.loading-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #B6E3FE;
+    animation: loading 7s linear infinite;
+}
+
+@keyframes loading {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.additional-info {
+    margin-top: -50px; 
+    margin-bottom: 150px; 
+    padding: 0 90px;
+    background-color: #ffffff; 
     text-align: left;
-    font-family: 'Poppins', sans-serif;
 }
 
-.card:hover{
-    background: #8cc6eb;
-    color:white;
-}
-.card{
-    transition: all 0.3s;
-}
-
-.card #h1-mission{
-    color: #CF000A
-}
-.card #h1-vision{
-    color: #000dc4;
-
+.additional-info p {
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #3f3f3f;
 }
 
 

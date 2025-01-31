@@ -26,9 +26,9 @@
         <div>
           <h4>Features</h4>
           <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Volunteers</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="home.php/#about">About Us</a></li>
+            <li><a href="organization.php">Volunteers</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">News & Updates</a></li>
             <li><a href="#">Contact Us</a></li>
