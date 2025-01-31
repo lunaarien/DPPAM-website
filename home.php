@@ -191,7 +191,7 @@
         </div>
     </section>
 
-    <?php include 'footer2.php'; ?>
+    <?php include 'footer.php'; ?>
     
     <script src="js/card-slider.js"></script>
     <script src="js/script.js"></script>
