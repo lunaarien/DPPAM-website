@@ -24,23 +24,15 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="home.php">Home</a></li>
                 <li class="dropdown">
-<<<<<<< HEAD
-                    <a href="home.php#about" class="dropdown-toggles">About Us <i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="whoarewe.php#whoarewe">Who We Are?</a></li>
-                        <li><a href="whoarewe.php#mission-vision">Mission & Vision</a></li>
-                        <li><a href="home.php#organization">Organization Profile</a></li>
-=======
                     <a href="home.php/#about" class="dropdown-toggle">About Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="whoarewe.php">Who We Are?</a></li>
                         <li><a href="mission-vision.php">Mission & Vision</a></li>
                         <li><a href="organization.php">Organization Profile</a></li>
->>>>>>> c2c0f13 (updated)
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#volunteers" class="dropdown-toggles">Volunteers<i class="fa fa-chevron-down"></i></a>
+                    <a href="#volunteers" class="dropdown-toggle">Volunteers<i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#upce">UPCE</a></li>
                         <li><a href="#vad">VAD</a></li>
@@ -50,7 +42,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggles">Resources<i class="fa fa-chevron-down"></i></a>
+                    <a href="#resources" class="dropdown-toggle">Resources<i class="fa fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#guide">Volunteers Guide</a></li>
                         <li><a href="#guidelines">Elections Guidelines</a></li>
@@ -62,17 +54,6 @@
             </ul>
         </nav>
     </div>
-<<<<<<< HEAD
-    <div class="container">
-        <section id="whoarewe">
-        <div id="whoarewerow" class="row">
-            <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
-                <h1><span>WHO</span> WE ARE?</h1>
-                <p><span>DPPAM - Diocese of Caloocan Public and Political Affairs Ministry</span> is an 
-                    organization dedicated to empowering individuals to actively participate in the electoral process.</p>
-                <p>We focus on promoting transparency, accountability, and democratic values through various programs and initiatives. 
-                    By fostering a community of engaged citizens, we aim to ensure free, fair, and credible elections that reflect the true will of the people.</p>
-=======
     
     <div class="whoarewe">
         <div class="whoarewe-container">
@@ -93,7 +74,6 @@
                     By fostering a community of engaged citizens, we aim to ensure free, fair, and credible elections that reflect the 
                     true will of the people.
                 </p>
->>>>>>> c2c0f13 (updated)
             </div>
 
             <div class="image-section">
@@ -106,115 +86,6 @@
                         <img src="images/whoweare5.jpeg">
                     </div>
                 </div>
-<<<<<<< HEAD
-            </div>
-        </div>
-        </section>
-        <section id="mission-vision">
-            <div id="mis-vis" class="row mt-6">
-                
-                <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
-                    <div class="card border-0 shadow rounded-5 p-3" id="mv-card">
-                    <div class="card-body">
-                        <h1 class="card-title fw-bold" id="h1-mission">Mission</h1>
-                        <p class="card-text fs-4 fw-medium">PCNC is committed to enabling NGOs to amplify their mission through a credible and accessible accreditation system.</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
-                    <div class="card border-0 shadow rounded-5 p-3" id="mv-card">
-                    <div class="card-body">
-                        <h1 class="card-title fw-bold " id="h1-vision">Vision</h1>
-                        <p class="card-text fs-4 fw-medium">A trusted and self-regulating community of NGOs, participating effectively in development and nation-building.</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div>
-        <?php include 'footer2.php'; ?>
-    </div>  
-</body>
-
-
-<!--<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-
-    dropdownToggles.forEach((toggle) => {
-        toggle.addEventListener("click", function (event) {
-            event.preventDefault();
-            let parentDropdown = this.parentElement;
-
-            // Close all other open dropdowns
-            document.querySelectorAll(".dropdown").forEach((dropdown) => {
-                if (dropdown !== parentDropdown) {
-                    dropdown.classList.remove("active");
-                }
-            });
-
-            // Toggle the clicked dropdown
-            parentDropdown.classList.toggle("active");
-        });
-    });
-
-    // Close dropdown if clicked outside
-    document.addEventListener("click", function (event) {
-        if (!event.target.closest(".dropdown")) {
-            document.querySelectorAll(".dropdown").forEach((dropdown) => {
-                dropdown.classList.remove("active");
-            });
-        }
-    });
-});
-</script> -->
-<!--Image Carousel Script-->
-<script>
-
-const images = document.querySelectorAll('.img-carousel img');
-const dots = document.querySelector('#dots');
-
-let speed = 3000;
-let index = 0;
-let intervalID;
-
-images.forEach((image, i) => {
-    const span = document.createElement('span')
-    span.className = 'dot';
-    if (i === 0) span.classList.add('active');
-    span.addEventListener('click', () => {
-        index = i;
-        startInterval();
-        updateContent();
-    })
-    dots.appendChild(span);
-
-})
-
-startInterval()
-function startInterval(){
-    if (intervalID)clearInterval(intervalID);
-    intervalID = setInterval(() => {
-        index ++;
-        if (index === images.length) index = 0;
-        updateContent();
-    }, speed);
-
-}
-updateContent()
-function updateContent(){
-    images.forEach(item => item.classList.remove('active'));
-    images[index].classList.add('active');
-
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach(item => item.classList.remove('active'));
-    dots[index].classList.add('active');
-
-}
-</script>
-</html>
-=======
 
                 <div class="carousel-controls">
                     <div class="nav-buttons">
@@ -299,4 +170,3 @@ function updateContent(){
     <script src="js/carousel.js"></script>
 </body>
 </html>
->>>>>>> c2c0f13 (updated)

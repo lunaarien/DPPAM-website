@@ -273,7 +273,8 @@ body {
 } */
 
 
-#whoarewerow{
+/* WHO ARE WE SECTION */
+.whoarewe {
     height: 100vh;
     background-color: #ffffff;
     display: flex;
