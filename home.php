@@ -50,9 +50,8 @@
                         <li><a href="#guidelines">Elections Guidelines</a></li>
                     </ul>
                 </li>
-                <li><a href="whoarewe.html">News & Updates</a></li>
+                <li><a href="#news-events">Events</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="#">FAQ</a></li>
             </ul>
         </nav>
     </div>
@@ -88,7 +87,7 @@
             </div>
     
             <div class="about-image">
-                <img src="img/vision-mission.jpg" alt="About Us Image">
+                <img src="img/quote2.jpg" alt="About Us Image">
             </div>
         </div>
     </section>
@@ -106,46 +105,95 @@
                 <div class="organization-details">
                     <p>People behind DPPAM. Dedicated leaders and coordinators working together
                         to uphold democratic values and ensure free and fair elections.</p>
-                    <a href="#" class="btn">See More <i class="fa fa-arrow-right"></i></a>
+                    <a href="organization.php" class="btn">See More <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
-    
+
             <main id="carousel">
                 <div class="item">
-                    <img src="images/1.jpg">
-                    <h3 class="name">Sally Sharpe</h3>
-                    <p class="occupation">Member since 2020</p>
-                    <p class="testimonial">Founder of Diocese of Caloocan Public and Political Affairs Ministry - DPPAM</p>
-                  </div>
-                  <div class="item">
-                    <img src="images/2.jpg">
-                    <h3 class="name">Michael John</h3>
-                    <p class="occupation">Member since 2020</p>
-                    <p class="testimonial">Founder of Diocese of Caloocan Public and Political Affairs Ministry - DPPAM</p>
-                  </div>
-                  <div class="item">
-                    <img src="images/3.jpg">
-                    <h3 class="name">Mikayla Eddie</h3>
-                    <p class="occupation">Member since 2020</p>
-                    <p class="testimonial">Founder of Diocese of Caloocan Public and Political Affairs Ministry - DPPAM</p>
-                  </div>
-                  <div class="item">
-                    <img src="images/4.jpg">
-                    <h3 class="name">Eve Smith</h3>
-                    <p class="occupation">Member since 2020</p>
-                    <p class="testimonial">Founder of Diocese of Caloocan Public and Political Affairs Ministry - DPPAM</p>
-                  </div>
-                  <div class="item">
-                    <img src="images/5.jpg">
-                    <h3 class="name">Luke Maxwell</h3>
-                    <p class="occupation">Member since 2020</p>
-                    <p class="testimonial">Founder of Diocese of Caloocan Public and Political Affairs Ministry - DPPAM</p>
-                  </div>
+                    <img src="images/1.jpg" alt="Sally Sharpe">
+                    <div class="hover-box">
+                        <h3 class="name">Sally Sharpe</h3>
+                        <p class="occupation">Member since 2020</p>
+                        <p class="testimonial">Founder of DPPAM</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/2.jpg" alt="Michael John">
+                    <div class="hover-box">
+                        <h3 class="name">Michael John</h3>
+                        <p class="occupation">Member since 2020</p>
+                        <p class="testimonial">Coordinator at DPPAM</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/3.jpg" alt="Mikayla Eddie">
+                    <div class="hover-box">
+                        <h3 class="name">Mikayla Eddie</h3>
+                        <p class="occupation">Member since 2020</p>
+                        <p class="testimonial">Volunteer Leader at DPPAM</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/4.jpg" alt="Eve Smith">
+                    <div class="hover-box">
+                        <h3 class="name">Eve Smith</h3>
+                        <p class="occupation">Member since 2020</p>
+                        <p class="testimonial">Core Team Member</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/5.jpg" alt="Eve Smith">
+                    <div class="hover-box">
+                        <h3 class="name">Eve Smith</h3>
+                        <p class="occupation">Member since 2020</p>
+                        <p class="testimonial">Core Team Member</p>
+                    </div>
+                </div>
             </main>
-    
-            <div class="swiper-arrows">
-                <i class="fa fa-arrow-left" id="prev"></i>
-                <i class="fa fa-arrow-right" id="next"></i>
+        </div>
+    </section>
+
+
+
+
+    <section class="volunteers" id="volunteers">
+        <div class="volunteers-container">
+            <div class="volunteers-content">
+                <div class="volunteers-text">
+                    <h2>
+                        <span class="highlight-white">TYPES OF </span><br>
+                        <span class="highlight-red">VOLUNTEERS</span>
+                    </h2>
+                </div>
+                <div class="volunteers-details">
+                    <p>Here are the different roles and duties of volunteers who help ensure fair and 
+                        smooth elections. Learn more about the different types of Pollwatchers.</p>
+                    <a href="#about" class="btn">Types of Pollwatchers <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="volunteers-boxes">
+                <div class="volunteer-box">
+                    <img src="img/upc.jpg" alt="Volunteer 1">
+                    <h3>Unofficial Parallel Count Encoder (UPCE)</h3>
+                    <a href="#" class="btn">See More</a>
+                </div>
+                <div class="volunteer-box">
+                    <img src="img/vad.jpg" alt="Volunteer 1">
+                    <h3>Voters' Assistancee Desk (VAD)</h3>
+                    <a href="#" class="btn">See More</a>
+                </div>
+                <div class="volunteer-box">
+                    <img src="img/psv.jpg" alt="Volunteer 1">
+                    <h3>Election Monitors or Observers (EO)</h3>
+                    <a href="#" class="btn">See More</a>
+                </div>
+                <div class="volunteer-box">
+                    <img src="img/eo.jpg" alt="Volunteer 1">
+                    <h3>Polling Station Volunteers (PSV)</h3>
+                    <a href="#" class="btn">See More</a>
+                </div>
             </div>
         </div>
     </section>
@@ -191,9 +239,38 @@
         </div>
     </section>
 
+    <section class="news-events" id="news-events">
+        <div class="news-events-container">
+            <div class="news-events-content">
+                <div class="news-events-text">
+                    <h2>
+                        <span class="highlight-black">UPCOMING </span><br>
+                        <span class="highlight-red">EVENTS </span>
+                    </h2>
+                </div>
+                <div class="news-events-details">
+                    <p>Stay informed about DPPAM’s upcoming events and activities. Join us in our mission 
+                        for clean and fair elections. Here’s our upcoming event—be part of it and make a difference!</p>
+                    <a href="events.php" class="btn">See More <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="news-events-poster">
+                <img src="img/poster1.jpg" alt="Upcoming Election Poster" class="carousel-image">
+                <img src="img/poster2.jpg" alt="Upcoming Election Poster" class="carousel-image">
+            </div>
+
+
+
+        </div>
+    </section>
+
+    
+
     <?php include 'footer.php'; ?>
     
     <script src="js/card-slider.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/carousel1.js"></script>
 </body>
 </html>

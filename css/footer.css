@@ -123,10 +123,6 @@ footer .footer-links a {
   font-size: 13px;
 }
 
-footer .footer-links a:hover {
-  text-decoration: underline;
-}
-
 footer .contact-us {
   display: flex;
   flex-direction: column;

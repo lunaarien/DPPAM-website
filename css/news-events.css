@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&family=Abyssinica+SIL&display=swap');
+
+html {
+    scroll-behavior: smooth; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+}
+
+
+
+/* NAVBAR */
+.navbar-container {
+    position: fixed; 
+    top: 20px; 
+    left: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+    background: linear-gradient(to right, 
+        #E8F6FF 21%,   
+        #B0E0FE 65%,  
+        #50CCFA 91%,  
+        #3AA7CF 100%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px;
+    padding: 10px 30px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin-right: 70px;
+    gap: 30px; 
+    position: relative;
+}
+
+.nav-links li {
+    position: relative; 
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #262626;
+    font-size: 17px;
+    font-family: 'Abyssinica SIL', serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 8px;
+}
+
+.nav-links li a:hover {
+    color: #007BFF;
+}
+
+
+
+/* ABOUT US & RESOURCES DROPDOWN */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    left: -25px;
+    background: #ffffff; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    display: none; 
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 160px; 
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px; 
+    font-size: 15px;
+    color: #333; 
+    transition: background 0.5s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f8ff; 
+    color: #007BFF;
+}
+
+.nav-links li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle i {
+    margin-left: 5px; 
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.nav-links li:hover .dropdown-toggle i {
+    transform: rotate(180deg); 
+}
+
+
+
+/* NAVBAR LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.ser {
+    color: #CF000A;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fy {
+    color: #4FA3E5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news-section {
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    padding: 100px 0; 
+    overflow: hidden; 
+}
+
+.news-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 20px; 
+    margin-top: 20px; 
+    flex-wrap: wrap; 
+}
+
+.left-box {
+    flex: 2;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 400px; 
+}
+
+.news-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #CF000A;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.news-meta i {
+    margin-right: 5px;
+    color: #666;
+}
+
+.news-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: 'Abyssinica SIL', serif;
+    margin-top: 10px;
+}
+
+.news-image {
+    width: 50%;  
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+.image-container {
+    display: flex;  /* Enables flexbox to arrange items horizontally */
+    justify-content: space-between;  /* Distributes the images evenly across the container */
+    gap: 20px;  /* Optional: Adds space between the images */
+}
+
+.multiple-news-image {
+    width: 48%;  /* Makes each image take up 48% of the container's width */
+    height: 250px;  /* Fixed height for the image */
+    object-fit: cover;  /* Ensures the image fills the container without stretching or distorting */
+    border-radius: 8px;  /* Optional: Adds rounded corners to the image */
+}
+
+
+
+.events-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Take up the full height of the viewport */
+    padding: 20px; /* Padding around the container */
+    box-sizing: border-box; /* Ensures padding doesn't affect total height */
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title-container h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.highlight-red {
+    color: #CF000A;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.highlight-black {
+    color: rgb(31, 31, 31);
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.highlight-blue {
+    color: #4FA3E5;
+    font-weight: 900;
+    font-size: 36;
+}
+
+.title-container p {
+    font-size: 15px;
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.boxes-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 48%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.image-container {
+    width: 100%;
+    height: 400px; 
+    overflow: hidden; 
+    border-radius: 8px;
+    margin-bottom: 20px; 
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.box h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.box p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.box .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.box .btn:hover {
+    background-color: #218838;
+}
+
+.back-icon {
+    position: absolute;
+    left: 190px;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /
+}
+
+.back-icon i {
+    color: #333; 
+}
+
+.back-icon:hover i {
+    color: #007bff; 
+}
+
+
+.gallery {
+    width: 100%;
+    max-width: 1200px; 
+    height: 60vmin; 
+    display: flex;
+    gap: 4px;
+    justify-content: space-between; 
+    margin: 0 auto; 
+}
+
+.gallery img {
+    height: 100%; 
+    width: calc(100% / 8 - 4px); 
+    object-fit: cover;
+    cursor: pointer;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.gallery img:hover {
+    width: calc(100% / 10 * 8 - 4px); 
+}
+
+
+
+
+
+
+
