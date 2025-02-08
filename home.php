@@ -59,9 +59,9 @@
     <section class="hero" id="home">
         <div class="hero-text">
             <h2>
-                <span class="highlight-red">BAYANIHAN</span> 
-                <span class="highlight-black">PARA SA MALINIS NA</span>
-                <span class="highlight-blue">HALALAN</span>
+                <!-- <span class="highlight-red">BAYANIHAN</span>  -->
+                <span class="highlight" id="typewriter"></span>
+                <!-- <span class="highlight-blue">HALALAN</span> -->
             </h2>
             <p>Welcome to the official website of <strong>Diocese of Caloocan Public and Political Affairs Ministry (DPPAM)</strong>. We are dedicated to empowering communities through active participation in free and fair elections. Be a Volunteer today and make a difference!</p>
             <a href="#" class="btn">BE A VOLUNTEER!</a>
@@ -177,7 +177,7 @@
                 <div class="volunteer-box">
                     <img src="img/upc.jpg" alt="Volunteer 1">
                     <h3>Unofficial Parallel Count Encoder (UPCE)</h3>
-                    <a href="#" class="btn">See More</a>
+                    <a href="volunteers.php" class="btn">See More</a>
                 </div>
                 <div class="volunteer-box">
                     <img src="img/vad.jpg" alt="Volunteer 1">
