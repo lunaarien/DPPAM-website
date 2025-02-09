@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
-<body>
+<body id="scrollbar">
     <div class="navbar-container">
         <nav class="navbar">
             <div class="logo">
@@ -59,15 +59,28 @@
     <section class="hero" id="home">
         <div class="hero-text">
             <h2>
-                <!-- <span class="highlight-red">BAYANIHAN</span>  -->
                 <span class="highlight" id="typewriter"></span>
-                <!-- <span class="highlight-blue">HALALAN</span> -->
             </h2>
             <p>Welcome to the official website of <strong>Diocese of Caloocan Public and Political Affairs Ministry (DPPAM)</strong>. We are dedicated to empowering communities through active participation in free and fair elections. Be a Volunteer today and make a difference!</p>
             <a href="#" class="btn">BE A VOLUNTEER!</a>
         </div>
     </section>
 
+    <div class="bottom-info-section">
+        <div class="info-box left">
+            <h3 class="counter" data-target="10000">0</h3>
+            <p>volunteers mobilized nationwide for election monitoring.</p>
+        </div>
+        <div class="info-box center">
+            <h3 class="counter" data-target="50">0</h3>
+            <p>partnerships with schools, churches, and civic groups.</p>
+        </div>
+        <div class="info-box right">
+            <h3 class="counter" data-target="1000">0</h3>
+            <p>precincts monitored for fair and honest elections.</p>
+        </div>
+    </div>
+    
     <section class="about" id="about">
         <div class="about-container">
             <div class="about-text">
@@ -272,5 +285,6 @@
     <script src="js/card-slider.js"></script>
     <script src="js/script.js"></script>
     <script src="js/carousel1.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
