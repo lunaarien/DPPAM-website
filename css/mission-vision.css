@@ -138,6 +138,146 @@ body {
     font-weight: bold;
 }
 
+.info-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center; 
+    padding: 0 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100vh;
+    flex-wrap: wrap; 
+    box-sizing: border-box; 
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    height: 400px;
+    padding: 50px 0px 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.card-icon {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 80px;  /* Increase the size of the container to allow padding */
+    height: 80px; /* Adjust the height to match the width */
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 10px; /* Add padding inside the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon img {
+    width: 60px;  /* Adjust the size of the image to fit within the padded circle */
+    height: 60px;
+    object-fit: cover; /* Make sure the image covers the circle without stretching */
+    border-radius: 50%; /* Ensure the image stays circular */
+}
+
+
+.card-title {
+    font-size: 21px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4FA3E5;
+    padding: 10px 0; 
+    margin: 20px 0 0; 
+    text-align: center;
+}
+
+.card-content {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    overflow-y: auto;
+    max-height: 220px; 
+    padding-right: 10px; 
+    text-align: left; 
+    font-family: 'Abyssinica SIL', serif;
+}
+
+.card-content p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.card-content ul {
+    list-style-type: disc;
+    padding-left: 50px;
+}
+
+.card-content ul li {
+    margin-bottom: 5px;
+}
+
+
+.second-additional-info {
+    margin-top: -50px; 
+    margin-bottom: 100px; 
+    padding: 0 90px;
+    background-color: #F2F2F2; 
+    text-align: left;
+}
+
+.second-additional-info p {
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #3f3f3f;
+}
+
+.second-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.second-image {
+    width: 500px; 
+    height: auto;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.second-additional-info {
+    flex: 1;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.blue {
+    color: blue;
+    font-weight: bold;
+}
+
+.brown {
+    color: rgb(116, 66, 1);
+    font-weight: bold;
+}
 
 
 .mission-vision {
@@ -259,124 +399,6 @@ body {
 
 
 
-.info-cards {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    padding: 0 70px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-  
-.card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 350px;
-    height: 400px;
-    padding: 50px 0px 20px;
-    position: relative;
-}
-  
-.card-icon {
-    background-color: #4FA3E5;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-  
-.card-title {
-    font-size: 21px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #4FA3E5;
-    padding: 10px 0; 
-    margin: 20px 0 0; 
-    text-align: center;
-}
-  
-.card-content {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 10px;
-    overflow-y: auto;
-    max-height: 220px; 
-    padding-right: 10px; 
-    text-align: left; 
-    font-family: 'Abyssinica SIL', serif;
-}
-  
-.card-content p {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 0 40px;
-    text-align: center;
-}
-  
-.card-content ul {
-    list-style-type: disc;
-    padding-left: 50px;
-}
-  
-.card-content ul li {
-    margin-bottom: 5px;
-}
-
-
-.bottom-info-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(45deg, #FF6B6B, #d3712f, #B71C1C, #ffba52);
-    background-size: 200% 200%;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 200px auto;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: gradientShift 6s ease infinite;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.info-box {
-    flex: 1;
-    padding: 5px;
-    margin: 5px;
-    max-width: 400px;
-}
-
-.info-box h3 {
-    font-size: 70px;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.info-box p {
-    font-size: 18px;
-    color: #ffffff;
-}
 
 
 

@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&family=Abyssinica+SIL&display=swap');
 
-html {
-    scroll-behavior: smooth; 
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; 
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     overflow-x: hidden; 
-    scroll-behavior: smooth; 
 }
 
 
@@ -146,7 +145,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     height: 100vh; 
-    background-image: url('../img/body2.png'); 
+    background-image: url('../img/home3.png'); 
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -206,7 +205,41 @@ body {
     font-size: 1rem;
 }
 
+/* INFO */
+.bottom-info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('../img/bg.png') no-repeat center center; 
+    background-size: cover; 
+    background-blend-mode: overlay; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 200px auto 100px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+}
+
+.info-box {
+    flex: 1;
+    padding: 5px;
+    margin: 5px;
+    max-width: 400px;
+}
+
+.info-box h3 {
+    font-size: 70px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 18px;
+    color: #ffffff;
+}
 
 /* ABOUT US */
 .about-container {
@@ -453,7 +486,7 @@ body {
 
 .additional-info p {
     font-family: 'Abyssinica SIL', serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.9;
     color: #3f3f3f;
 }
@@ -1009,6 +1042,17 @@ main#carousel {
 
 
 
+/* ANIMATION */
+.organization-container, .about-container, .volunteers-container, .news-events-container, .bottom-info-section  {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.organization-container.show, .about-container.show, .volunteers-container.show, .news-events-container.show, .bottom-info-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 

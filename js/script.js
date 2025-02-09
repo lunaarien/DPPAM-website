@@ -70,5 +70,47 @@ document.addEventListener("DOMContentLoaded", function() {
     typeWriter(); 
 });
 
+document.addEventListener('DOMContentLoaded', () => { 
+    const counters = document.querySelectorAll('.counter');
+    
+    const startCounting = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const speed = 150; 
+        const increment = target / speed; 
+        let current = 0;  
+        
+        const updateNumber = () => {
+            if (current < target) {
+                current += increment;
+                counter.innerText = Math.ceil(current).toLocaleString(); 
+                setTimeout(updateNumber, 10); 
+            } else {
+                counter.innerText = target.toLocaleString(); 
+            }
+        };
+
+        updateNumber();
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounting(entry.target); 
+            }
+        });
+    }, { threshold: 0.5 }); 
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
+
+
+
+
+
+
+
+
 
 
