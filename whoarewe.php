@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
 <div class="navbar-container">
         <nav class="navbar">
             <div class="logo">
@@ -142,8 +143,9 @@
         </div>
     </div>
 
-
+    <?php include 'chatbotfolder/chatbot.php';?>
     <?php include 'footer.php'; ?>
+    
 
     <script src="js/carousel.js"></script>
 </body>
