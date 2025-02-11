@@ -98,7 +98,7 @@
     </div>
 
     <div class="content-container">
-        <img src="img/coat.png" alt="PPCRV Image" class="left-image">
+        <img src="img/logo.jpg" alt="PPCRV Image" class="left-image">
         <div class="additional-info">
             <p>
                 The Three (3) major symbols of the Coat of Arms represent the three jurisdictions that comprise the Diocese of Kalookan; namely:

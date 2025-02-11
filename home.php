@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
-<body id="scrollbar">
+<body>
     <div class="navbar-container">
         <nav class="navbar">
             <div class="logo">
@@ -51,7 +51,7 @@
                     </ul>
                 </li>
                 <li><a href="#news-events">Events</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </div>
@@ -272,11 +272,24 @@
                 <img src="img/poster1.jpg" alt="Upcoming Election Poster" class="carousel-image">
                 <img src="img/poster2.jpg" alt="Upcoming Election Poster" class="carousel-image">
             </div>
-
-
-
         </div>
     </section>
+
+    <div class="contact-container" id="contact">
+        <h1 class="contact-title">Contact Us</h1>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
 
     
 

@@ -48,7 +48,7 @@
                         <li><a href="#guidelines">Elections Guidelines</a></li>
                     </ul>
                 </li>
-                <li><a href="whoarewe.html">News & Events</a></li>
+                <li><a href="home.php/#news-events">Events</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </nav>
