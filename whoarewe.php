@@ -9,51 +9,7 @@
 </head>
 <body>
 
-<div class="navbar-container">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo" class="logo-image"> 
-                <span class="ser">Serv</span><span class="fy">ify</span>
-            </div>          
-
-            <div class="hamburger" id="hamburger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="home.php">Home</a></li>
-                <li class="dropdown">
-                    <a href="#about" class="dropdown-toggles">About Us <i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="whoarewe.php">Who We Are?</a></li>
-                        <li><a href="mission-vision.php">Mission & Vision</a></li>
-                        <li><a href="organization.php">Organization Profile</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#volunteers" class="dropdown-toggles">Volunteers<i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#upce">UPCE</a></li>
-                        <li><a href="#vad">VAD</a></li>
-                        <li><a href="#psv">PSV</a></li>
-                        <li><a href="#eo">Election Observers</a></li>
-                        <li><a href="#pollwatchers">Types of Pollwatchers</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggles">Resources<i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#guide">Volunteers Guide</a></li>
-                        <li><a href="#guidelines">Elections Guidelines</a></li>
-                    </ul>
-                </li>
-                <li><a href="events.php">Events</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
+<?php include("navbar.php"); ?>
     
     <div class="whoarewe">
         <div class="whoarewe-container">
@@ -148,5 +104,11 @@
     
 
     <script src="js/carousel.js"></script>
+    <script>
+        document.getElementById('hamburger-icon').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active'); 
+    });
+    </script>
 </body>
 </html>
