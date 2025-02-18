@@ -143,7 +143,6 @@
         </div>
     </div>
 
-    <?php include 'chatbotfolder/chatbot.php';?>
     <?php include 'footer.php'; ?>
     
 
