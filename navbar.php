@@ -318,7 +318,7 @@
                     </ul>
                 </li>
                 <li><a href="events.php">Events</a></li>
-                <li><a href="contactus.php">Contact Us</a></li>
+                <li><a href="home.php#contactus">Contact Us</a></li>
             </ul>
         </nav>
     </div>

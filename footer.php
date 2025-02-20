@@ -24,20 +24,20 @@
         <div>
           <h4>Features</h4>
           <ul class="footer-links">
-            <li><a href="home.php/#about">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Volunteers</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">News & Updates</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="home.php#home">Home</a></li>
+            <li><a href="home.php#about">About Us</a></li>
+            <li><a href="volunteers.php">Volunteers</a></li>
+            <li><a href="events.php">Events</a></li>
+            <li><a href="resources.php">Resources</a></li>
+            <li><a href="home.php#contactus">Contact Us</a></li>
           </ul>
         </div>
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Mission/Vision</a></li>
-            <li><a href="#">Organization Profile</a></li>
+            <li><a href="whoarewe.php">About Us</a></li>
+            <li><a href="mission-vision.php">Mission/Vision</a></li>
+            <li><a href="organization.php">Organization Profile</a></li>
           </ul>
         </div>
         <div>
