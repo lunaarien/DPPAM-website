@@ -27,9 +27,9 @@
             <div class="boxes-container">
                 <div class="box">
                     <div class="image-container">
-                        <img src="img/event1.jpeg" alt="Volunteer 1">
+                        <img src="img/n4.jpg" alt="Volunteer 1">
                     </div>
-                    <h3>2025 National and Local Elections: Volunteers Driving Change and Ensuring Fairness in Action</h3>
+                    <h3>Diocese of Kalookan PPAM-PPCRV Meets with Caloocan Election Officers for 2025 Polls</h3>
                     <!-- <p>Volunteers are vital in ensuring a smooth, fair, and transparent election process 
                         by supporting voter education, precinct monitoring, and logistical tasks, helping 
                         make every vote count.</p> -->
@@ -37,9 +37,9 @@
                 </div>
                 <div class="box">
                     <div class="image-container">
-                        <img src="img/event2.jpg" alt="Volunteer 2">
+                        <img src="img/e3.jpg" alt="Volunteer 2">
                     </div>
-                    <h3>DPPAM Hosts Successful Orientation for 2025 Election Volunteers</h3>
+                    <h3>DPPAM-PPCRV Strengthens 2025 Election Preparations in Courtesy Call with COMELEC Navotas</h3>
                     <!-- <p>DPPAM trained volunteers for the 2025 elections, preparing them for key roles 
                         in ensuring a smooth and fair voting process.  Their efforts will help ensure 
                         transparency and voter engagement.</p> -->

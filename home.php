@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
-<body id="scrollbar">
+<body>
 <?php include("navbar.php"); ?>
 
     <section class="hero" id="home">
@@ -36,6 +36,7 @@
             <p>precincts monitored for fair and honest elections.</p>
         </div>
     </div>
+
     
     <section class="about" id="about">
         <div class="about-container">
@@ -228,39 +229,27 @@
         </div>
     </section>
 
-    <div class="contact-container" id="contact">
-        <h1 class="contact-title">Contact Us</h1>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
+    <div class="contactus" id="contactus">
+        <div class="contactus-container">
+            <div class="contactus-leftsection">
+                <h3>VISIT THE NEAREST PARISH IN YOUR AREA FOR MORE QUESTIONS.</h3>
+                <p><span>Contact:</span> A. (02) 8288-9116</p>
+                <p><span>Mail:</span> example_email@gmail.com</p>
+                <img src="img/contactus-logo.png" alt="ddpam-logo">
+            </div>
+            <div class="contactus-rightsection">
+                <h2 class="form-header">LEAVE YOUR MESSAGE HERE</h2>
+                <p class="form-text">We really appreciate you taking the time to get in touch. Please fill in the form</p>
+                <form action="">
+                    <input type="email" id="form-input-email" name="form-input-email" placeholder="Your Email">
+                    <input type="text" id="form-input-name" name="form-input-name" placeholder="Name">
+                    <textarea name="form-textarea" id="form-textarea" rows="20" cols="100" placeholder="Write your message here..." style="resize: none;"></textarea>
+                    <button type="submit" name="form-submit" id="form-submit">Submit</button>   
+                </form>
+            </div>
+        </div>
     </div>
 
-    <div class="contact-container" id="contact">
-        <h1 class="contact-title">Contact Us</h1>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </div>
-
-    <?php include 'chatbotfolder/chatbot.php';?>
     <?php include 'footer.php'; ?>
     
     <script src="js/card-slider.js"></script>

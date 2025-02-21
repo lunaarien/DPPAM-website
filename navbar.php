@@ -1,5 +1,5 @@
 <style>
-    /* NAVBAR */
+/* NAVBAR */
 .navbar-container {
     position: fixed; 
     top: 20px; 
@@ -20,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-links {
@@ -133,7 +134,7 @@
     border-radius: 2px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .logo-image {
         width: 40px; 
         height: 40px;
@@ -142,38 +143,32 @@
     .ser, .fy {
         font-size: 15px; 
     }
+    
+    .navbar-container {
+        padding: 8px 15px;
+    }
 
     .nav-links {
         display: none; 
         flex-direction: column;
-        gap: 4px;
+        gap: 4px; /* Reduced gap between navbar link boxes for mobile */
         padding: 10px;
-        background-color: rgb(234, 234, 234); 
-        position: absolute; 
-        top: 55px; 
-        left: 88%; 
-        transform: translateX(-50%); 
-        width: 37%; 
+        background-color: rgba(211, 211, 211, 1); /* Box background color */
+        position: absolute; /* Position the box on top */
+        top: 65px; /* Adjust this value based on your navbar height */
+        left: 83%; /* Position box in the center */
+        transform: translateX(-50%); /* Offset to center the box */
+        width: 30%; /* Adjust width to make it fit nicely */
         border-radius: 5px;
-        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); 
-        transition: all 0.3s ease; 
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for the box */
+        transition: all 0.3s ease; /* Smooth transition when toggling */
     }
 
     .navbar {
         flex-wrap: wrap;
-        padding: 0px 20px; 
-        position: relative;
+        padding: 10px 20px; 
+        position: relative; 
         z-index: 10; 
-    }
-
-    .hero {
-        z-index: 1;
-        height: 100vh; 
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        text-align: center;
-        background: none;
     }
 
     .hamburger {
@@ -193,58 +188,11 @@
         flex-direction: row; 
         align-items: center;
     }
-
-    .hero-text h2 {
-        font-size: 2rem; 
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-
-    .hero-text {
-        max-width: 400px; 
-        padding: 20px;
-        border-radius: 8px;
-        margin-left: 10px;
-    }
-
-    .highlight-red {
-        color: #CF000A;
-        font-weight: 900;
-        font-size: 40px;
-    }
-    
-    .highlight-black {
-        color: rgb(31, 31, 31);
-        font-weight: 900;
-        font-size: 40px;
-    }
-    
-    .highlight-blue {
-        color: #4FA3E5;
-        font-weight: 900;
-        font-size: 40px;
-    }
-
-    .btn {
-        font-size: 13px; 
-        padding: 8px 16px; 
-        z-index: 11px;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    body{
-        background: none;
-    }
-
     .ser, .fy {
         font-size: 16px; 
-    }
-
-    .hero{
-        height: 70vh; 
     }
 
     .logo-image {
@@ -260,24 +208,10 @@
     .navbar {
         padding: 10px 15px; 
     }
-
-    .hero-text h2 {
-        font-size: 20px; 
-    }
-
-    .hero-text p {
-        font-size: 10px; 
-    }
-
-    .btn {
-        font-size: 12px; 
-        padding: 6px 14px; 
-        z-index: 10;
-    }
 }
 
 </style>
-<div class="navbar-container">
+    <div class="navbar-container">
         <nav class="navbar">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo" class="logo-image"> 

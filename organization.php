@@ -121,15 +121,15 @@
             </div>
         </div> 
     </section>
-    <?php include 'chatbotfolder/chatbot.php';?>
+    
     <?php include 'footer.php'; ?>
-
+    
     <script src="js/toggle.js"></script>
     <script>
         document.getElementById('hamburger-icon').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active'); 
-    });
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active'); 
+            });
     </script>
 </body>
 </html>

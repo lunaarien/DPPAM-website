@@ -17,31 +17,40 @@
         <div class="news-container">
             <div class="left-box">
                 <div class="news-content">
-                    <h2 class="news-title">2025 National and Local Elections: Volunteers in Action</h2>
+                    <h2 class="news-title">Diocese of Kalookan PPAM-PPCRV Meets with Caloocan Election Officers for 2025 Polls</h2>
                     <div class="news-meta">
                         <p><i class="fas fa-calendar-alt"></i> February 10, 2025</p>
                         <p><i class="fas fa-user"></i> By Juan Dela Cruz</p>
                     </div>
-                    <p>With the 2025 National and Local Elections fast approaching, thousands of dedicated volunteers from across the country are preparing to ensure 
-                        a clean, fair, and transparent voting process. The Parish Pastoral Council for Responsible Voting (PPCRV) and other civic organizations have 
-                        launched intensive training programs to equip volunteers with essential skills for election day.</p> 
+                    <p>The Diocese of Kalookan Public and Political Affairs Ministry (PPAM) - Parish Pastoral Council for Responsible Voting (PPCRV) 
+                        recently conducted a courtesy call with the Election Officers of Caloocan City’s three districts to strengthen collaboration 
+                        ahead of the 2025 elections. The meeting took place at the Office of the Election Officer in District 2 and was attended by 
+                        key COMELEC officials: Atty. Ma. Anne D. Gonzales (District 1), Atty. Dinah A. Valencia-Jimenez (District 2), and Atty. Kevin V. Tibay 
+                        (District 3).</p> 
                         
                     <br>
                     
-                    <p>These efforts aim to safeguard electoral integrity by mobilizing poll watchers, voter assistance desks, and IT support teams. Volunteers will be 
-                        stationed at various precincts nationwide, monitoring vote counting and reporting any irregularities in real time.</p> 
+                    <p>Representing DPPAM-PPCRV were Bro. Angelito Bautista Jr. (Diocesan Coordinator), Bro. Danny Cabrera (District 2 City Coordinator), 
+                        Jonathan De Vera (District 2 Assistant City Coordinator), Bro. Benjie Benjamin (District 1 City Coordinator), Sis. Danielle Jordan 
+                        (Diocesan Secretary), and Bro. JC Moratalla (City District Secretary).</p> 
+                        
+                    <br>
+
+                    <p>This collaboration reflects the ongoing partnership between the Diocese of Kalookan and COMELEC, with a shared commitment to promoting 
+                        clean, honest, accountable, meaningful, and peaceful (CHAMP) elections. Both organizations remain dedicated to empowering voters, 
+                        supporting volunteers, and safeguarding the integrity of the electoral process within the Diocese.</p> 
                         
                     <br>
 
                     <div class="gallery">
-                        <img src="img/e-pic1.jpg" alt="">
-                        <img src="img/e-pic2.jpg" alt="">
-                        <img src="img/e-pic3.jpg" alt="">
-                        <img src="img/e-pic4.jpg" alt="">
-                        <img src="img/e-pic5.jpg" alt="">
-                        <img src="img/e-pic6.jpg" alt="">
-                        <img src="img/e-pic7.jpg" alt="">
-                        <img src="img/e-pic8.jpg" alt="">
+                        <img src="img/n1.jpg" alt="">
+                        <img src="img/n2.jpg" alt="">
+                        <img src="img/n3.jpg" alt="">
+                        <img src="img/n4.jpg" alt="">
+                        <img src="img/n5.jpg" alt="">
+                        <img src="img/n6.jpg" alt="">
+                        <img src="img/n7.jpg" alt="">
+                        <img src="img/n8.jpg" alt="">
                     </div>                    
                     <br>  
 
