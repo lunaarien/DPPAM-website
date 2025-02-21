@@ -66,7 +66,7 @@
         </div>
     </section>
 
-
+    <?php include 'chatbotfolder/chatbot.php';?>
     <?php include 'footer.php'; ?>
 
     <script src="js/sample.js"></script>
