@@ -1,258 +1,357 @@
+<?php
+// Include database connection
+include 'database/db.php';
+
+// Fetch volunteers from database
+$sql = "SELECT MISSION_DESCRIPTION FROM missions"; 
+$result = $conn->query($sql);
+
+$volunteers = [];
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $volunteers[] = $row;
+    }
+}
+// Close the connection
+$conn->close();
+?>
+
 <style>
-/* NAVBAR */
-.navbar-container {
-    position: fixed; 
-    top: 20px; 
-    left: 20px; 
-    right: 20px; 
-    z-index: 1000; 
-    background: linear-gradient(to right, 
-        #E8F6FF 21%,   
-        #B0E0FE 65%,  
-        #50CCFA 91%,  
-        #3AA7CF 100%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
-    border-radius: 15px;
-    padding: 10px 30px; 
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex;
-    margin-right: 70px;
-    gap: 30px; 
-    position: relative;
-}
-
-.nav-links li {
-    position: relative; 
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #262626;
-    font-size: 17px;
-    font-family: 'Abyssinica SIL', serif;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 5px 8px;
-}
-
-.nav-links li a:hover {
-    color: #007BFF;
-}
-
-
-
-/* ABOUT US & RESOURCES DROPDOWN */
-.dropdown-menu {
-    list-style: none;
-    position: absolute;
-    left: -25px;
-    background: #ffffff; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
-    border-radius: 10px;
-    display: none; 
-    padding: 10px 0;
-    z-index: 1000;
-    min-width: 160px; 
-}
-
-.dropdown-menu li a {
-    text-decoration: none;
-    display: block;
-    padding: 10px 15px; 
-    font-size: 15px;
-    color: #333; 
-    transition: background 0.5s ease, color 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #f0f8ff; 
-    color: #007BFF;
-}
-
-.dropdown:hover .dropdown-menu{
-    display: block;
-}
-
-.dropdown-toggles i {
-    margin-left: 5px; 
-    font-size: 12px;
-    transition: transform 0.3s ease;
-}
-
-.nav-links li:hover .dropdown-toggles i {
-    transform: rotate(180deg); 
-}
-
-
-
-/* NAVBAR LOGO */
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.ser {
-    color: #CF000A;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.fy {
-    color: #4FA3E5;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* HAMBURGER MENU */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 20px;
-    height: 2px;
-    background-color: #333;
-    border-radius: 2px;
-}
-
-@media screen and (max-width: 1024px) {
-    .logo-image {
-        width: 40px; 
-        height: 40px;
-    }
-    
-    .ser, .fy {
-        font-size: 15px; 
-    }
-    
+    /* NAVBAR */
     .navbar-container {
-        padding: 8px 15px;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: linear-gradient(to right,
+                #E8F6FF 21%,
+                #B0E0FE 65%,
+                #50CCFA 91%,
+                #3AA7CF 100%);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 10px 30px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .nav-links {
-        display: none; 
-        flex-direction: column;
-        gap: 4px; /* Reduced gap between navbar link boxes for mobile */
-        padding: 10px;
-        background-color: rgba(211, 211, 211, 1); /* Box background color */
-        position: absolute; /* Position the box on top */
-        top: 65px; /* Adjust this value based on your navbar height */
-        left: 83%; /* Position box in the center */
-        transform: translateX(-50%); /* Offset to center the box */
-        width: 30%; /* Adjust width to make it fit nicely */
-        border-radius: 5px;
-        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for the box */
-        transition: all 0.3s ease; /* Smooth transition when toggling */
+        list-style-type: none;
+        display: flex;
+        margin-right: 70px;
+        gap: 30px;
+        position: relative;
     }
 
-    .navbar {
-        flex-wrap: wrap;
-        padding: 10px 20px; 
-        position: relative; 
-        z-index: 10; 
-    }
-
-    .hamburger {
-        display: flex; 
-    }
-
-    .nav-links.active {
-        display: flex; 
+    .nav-links li {
+        position: relative;
     }
 
     .nav-links li a {
-        font-size: 16px; 
-        padding: 5px 8px; 
+        text-decoration: none;
+        color: #262626;
+        font-size: 17px;
+        font-family: 'Abyssinica SIL', serif;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        padding: 5px 8px;
     }
 
+    .nav-links li a:hover {
+        color: #007BFF;
+    }
+
+
+    /* ABOUT US & RESOURCES DROPDOWN */
+    .dropdown-menu {
+        list-style: none;
+        position: absolute;
+        left: -29px;
+        background: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        display: none;
+        padding: 10px 0;
+        z-index: 1000;
+        min-width: 160px;
+    }
+
+    .dropdown-menu li a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        font-size: 15px;
+        color: #333;
+        transition: background 0.5s ease, color 0.3s ease;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #f0f8ff;
+        color: #007BFF;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-toggles i {
+        margin-left: 5px;
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links li:hover .dropdown-toggles i {
+        transform: rotate(180deg);
+    }
+
+
+    /* NAVBAR LOGO */
     .logo {
-        flex-direction: row; 
+        display: flex;
         align-items: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .ser, .fy {
-        font-size: 16px; 
     }
 
     .logo-image {
-        width: 35px; 
-        height: 35px;
-    }
-    
-    .nav-links li a {
-        font-size: 13px; 
-        padding: 4px 6px; 
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
     }
 
-    .navbar {
-        padding: 10px 15px; 
+    .ser {
+        color: #CF000A;
+        font-size: 20px;
+        font-weight: bold;
     }
-}
+
+    .fy {
+        color: #4FA3E5;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    /* HAMBURGER MENU */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+        border-radius: 2px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .navbar-container{
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            right: 10px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            padding: 10px;
+            background-color: rgb(234, 234, 234);
+            position: absolute;
+            top: 60px;
+            left: 80%;
+            transform: translateX(-50%);
+            width: 40%;
+            border-radius: 5px;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-menu {
+            display: none;
+            top: 5px;
+            left: -175px;
+            border-radius: 5px;
+            
+        }
+
+        .dropdown.active .dropdown-menu {
+            display: block;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li a {
+            font-size: 16px;
+            padding: 5px 8px;
+        }
+
+        .logo {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .ser,
+        .fy {
+            font-size: 16px;
+        }
+
+        .logo-image {
+            width: 35px;
+            height: 35px;
+        }
+
+        .nav-links li a {
+            font-size: 13px;
+            padding: 4px 6px;
+        }
+
+        .navbar {
+            padding: 10px 15px;
+        }
+
+    }
 
 </style>
-    <div class="navbar-container">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo" class="logo-image"> 
-                <span class="ser">Serv</span><span class="fy">ify</span>
-            </div>          
+<div class="navbar-container">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" class="logo-image">
+            <span class="ser">Serv</span><span class="fy">ify</span>
+        </div>
 
-            <div class="hamburger" id="hamburger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="hamburger" id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="home.php">Home</a></li>
-                <li class="dropdown">
-                    <a href="home.php#about" class="dropdown-toggles">About Us <i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="whoarewe.php">Who We Are?</a></li>
-                        <li><a href="mission-vision.php">Mission & Vision</a></li>
-                        <li><a href="organization.php">Organization Profile</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="volunteers.php" class="dropdown-toggles">Volunteers<i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#upce">UPCE</a></li>
-                        <li><a href="#vad">VAD</a></li>
-                        <li><a href="#psv">PSV</a></li>
-                        <li><a href="#eo">Election Observers</a></li>
-                        <li><a href="#pollwatchers">Types of Pollwatchers</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="resources.php" class="dropdown-toggles">Resources<i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#guide">Volunteers Guide</a></li>
-                        <li><a href="#guidelines">Elections Guidelines</a></li>
-                    </ul>
-                </li>
-                <li><a href="events.php">Events</a></li>
-                <li><a href="home.php#contactus">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home.php">Home</a></li>
+            <li class="dropdown">
+                <a href="home.php#about" class="dropdown-toggles">About Us <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="whoarewe.php">Who We Are?</a></li>
+                    <li><a href="mission-vision.php">Mission & Vision</a></li>
+                    <li><a href="organization.php">Organization Profile</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="home.php#volunteers" class="dropdown-toggles">
+                    Volunteers <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <?php if (!empty($volunteers)): ?>
+                        <?php foreach ($volunteers as $volunteer): ?>
+                            <li>
+                                <a href="volunteers.php?mission=<?php echo urlencode($volunteer['MISSION_DESCRIPTION']); ?>">
+                                    <?php echo htmlspecialchars($volunteer['MISSION_DESCRIPTION']); ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <li><a href="#">No volunteers available</a></li>
+                    <?php endif; ?>
+
+                    <!-- Static menu items -->
+                    <!-- <li><a href="upce.php">UPCE</a></li>
+                    <li><a href="vad.php">VAD</a></li>
+                    <li><a href="psv.php">PSV</a></li>
+                    <li><a href="eo.php">EO</a></li> -->
+                    <li><a href="pollwatchers.php">Types of Pollwatchers</a></li>
+                </ul>
+            </li>
+
+
+            <!-- <li class="dropdown">
+                <a href="home.php#volunteers" class="dropdown-toggles">Volunteers<i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu"> -->
+                    <?php # if ($volunteers): ?>
+                        <?php # foreach ($volunteers as $volunteer): ?>
+                            <!-- <li><a href="/volunteers#<?php #echo $volunteer['MISSION_DESCRIPTION'] ?? ' '; ?>"> -->
+                                    <?php # echo str_replace(['(', ')'], '', $volunteer['MISSION_DESCRIPTION'] ?? ''); ?>
+                                </a>
+                            </li>
+                        <?php # endforeach; ?>
+                    <?php #else: ?>
+                    <?php #endif; ?>
+                    <!-- <li><a href="upce.php">UPCE</a></li>
+                    <li><a href="vad.php">VAD</a></li>
+                    <li><a href="psv.php">PSV</a></li>
+                    <li><a href="eo.php">EO</a></li>
+                    <li><a href="pollwatchers.php">Types of Pollwatchers</a></li>
+
+                </ul>
+            </li> -->
+
+            <!-- <li class="dropdown">
+                <a href="/index#resources" class="dropdown-toggles">Resources<i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#guide">Volunteers Guide</a></li>
+                    <li><a href="#guidelines">Elections Guidelines</a></li>
+                </ul>
+            </li> -->
+            <li><a href="home.php#resources">Resources</a></li>
+            <li><a href="home.php#news-events">Events</a></li>
+            <li><a href="home.php#contactus">Contact Us</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const dropdowns = document.querySelectorAll('.dropdown-toggles');
+  let clickedOnce = null; 
+
+  dropdowns.forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+      if (window.innerWidth <= 768) { 
+        e.preventDefault(); 
+        const parentLi = this.parentElement;
+
+        if (clickedOnce !== parentLi) {
+          
+          document.querySelectorAll('.dropdown').forEach(dropdown => {
+            if (dropdown !== parentLi) {
+              dropdown.classList.remove('active'); 
+            }
+          });
+
+          parentLi.classList.toggle('active');
+          clickedOnce = parentLi; 
+        } else {
+          
+          window.location.href = this.getAttribute('href');
+        }
+      }
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.dropdown')) {
+      dropdowns.forEach(dropdown => dropdown.parentElement.classList.remove('active'));
+      clickedOnce = null;
+    }
+  });
+});
+
+</script>
+

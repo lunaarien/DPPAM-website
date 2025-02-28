@@ -1,3 +1,29 @@
+<?php
+include 'database/db.php';
+
+$missionType = isset($_GET['mission']) ? urldecode($_GET['mission']) : null;
+$volunteerData = null;
+
+if ($missionType) {
+
+    $sql = "SELECT * FROM missions WHERE MISSION_DESCRIPTION = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $missionType);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    if ($result->num_rows > 0) {
+        $volunteerData = $result->fetch_assoc();
+    }
+}
+
+$conn->close();
+
+$qualifications = isset($volunteerData['MISSION_QUALIFICATION']) ? explode(',', $volunteerData['MISSION_QUALIFICATION']) : [];
+$works = isset($volunteerData['MISSION_WORK']) ? explode(',', $volunteerData['MISSION_WORK']) : [];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,188 +34,75 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<?php include("navbar.php"); ?>
-    
-    <div class="volunteer-types">
-        <div class="volunteer-types-container">
-            <div class="volunteer-types-text-content">
-                <h1>
-                <span class="highlight-title">Unofficial Parallel Count Encoder (UPCE)</span>
-                </h1>
-                <p>
-                    The Unofficial Parallel Count Encoder (UPCE) is a tool designed to process and encode data 
-                    in parallel, improving efficiency and accuracy in counting and encoding tasks.
-                </p>
-                <p>
-                    What they do:
-                </p>
-                <ul>
-                    <li>Process Multiple Counts Simultaneously: Manages the encoding of multiple datasets at the same time to reduce processing time.</li>
-                    <li>Ensure Data Accuracy: Automatically checks for discrepancies and ensures reliable data encoding.</li>
-                    <li>Real-Time Data Handling: Updates information in real-time for faster reporting and decision-making.</li>
-                    <li>Maintain Data Integrity: Verifies consistency and prevents data errors during the encoding process.</li>
-                </ul>
-            </div>
 
-            <div class="image-section">
-                <div class="image-container">
-                    <div class="img-carousel">
-                        <img src="images/whoweare1.jpeg" class="active">
-                        <img src="images/whoweare2.jpg">
-                        <img src="images/whoweare3.jpg">
-                        <img src="images/whoweare4.jpg">
-                        <img src="images/whoweare5.jpeg">
-                    </div>
-                </div>
-
-                <div class="carousel-controls">
-                    <div class="nav-buttons">
-                        <button class="prev-btn">&lt;</button> <!-- Left Arrow -->
-                        <button class="next-btn">&gt;</button> <!-- Right Arrow -->
-                    </div>
-                    <div id="dots-nav"></div> <!-- Dots Navigation -->
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php include("navbar.php"); ?>
 
     <div class="volunteer-types">
         <div class="volunteer-types-container">
             <div class="volunteer-types-text-content">
                 <h1>
-                <span class="highlight-title">Unofficial Parallel Count Encoder (UPCE)</span>
+                    <span class="highlight-title">
+                        <?php echo htmlspecialchars($volunteerData['MISSION_NAME'] ?? 'Volunteer Type Not Found'); ?>
+                    </span>
                 </h1>
                 <p>
-                    The Unofficial Parallel Count Encoder (UPCE) is a tool designed to process and encode data 
-                    in parallel, improving efficiency and accuracy in counting and encoding tasks.
+                    <?php echo htmlspecialchars($volunteerData['MISSION_DESC'] ?? 'No description available for this role.'); ?>
                 </p>
-                <p>
-                    What they do:
-                </p>
+
+                <p class="desc">What they do:</p>
                 <ul>
-                    <li>Process Multiple Counts Simultaneously: Manages the encoding of multiple datasets at the same time to reduce processing time.</li>
-                    <li>Ensure Data Accuracy: Automatically checks for discrepancies and ensures reliable data encoding.</li>
-                    <li>Real-Time Data Handling: Updates information in real-time for faster reporting and decision-making.</li>
-                    <li>Maintain Data Integrity: Verifies consistency and prevents data errors during the encoding process.</li>
+                    <?php 
+                    $works = isset($volunteerData['MISSION_WORK']) ? explode(',', $volunteerData['MISSION_WORK']) : []; 
+                    foreach ($works as $work): 
+                    ?>
+                        <li><?php echo htmlspecialchars(trim($work)); ?></li>
+                    <?php endforeach; ?>
                 </ul>
+
+                <p class="desc">Qualifications:</p>
+                <ul>
+                    <?php 
+                    $qualifications = isset($volunteerData['MISSION_QUALIFICATION']) ? explode(',', $volunteerData['MISSION_QUALIFICATION']) : []; 
+                    foreach ($qualifications as $qualification): 
+                    ?>
+                        <li><?php echo htmlspecialchars(trim($qualification)); ?></li>
+                    <?php endforeach; ?>
+                </ul>
+
             </div>
 
             <div class="image-section">
                 <div class="image-container">
                     <div class="img-carousel">
-                        <img src="images/whoweare1.jpeg" class="active">
-                        <img src="images/whoweare2.jpg">
-                        <img src="images/whoweare3.jpg">
-                        <img src="images/whoweare4.jpg">
-                        <img src="images/whoweare5.jpeg">
+                        <img src="img/whoweare1.jpg" class="active">
+                        <img src="img/whoweare2.jpg">
+                        <img src="img/whoweare3.jpg">
+                        <img src="img/whoweare4.jpg">
+                        <img src="img/whoweare5.jpeg">
                     </div>
                 </div>
 
                 <div class="carousel-controls">
                     <div class="nav-buttons">
-                        <button class="prev-btn">&lt;</button> <!-- Left Arrow -->
-                        <button class="next-btn">&gt;</button> <!-- Right Arrow -->
+                        <button class="prev-btn">&lt;</button>
+                        <button class="next-btn">&gt;</button>
                     </div>
-                    <div id="dots-nav"></div> <!-- Dots Navigation -->
+                    <div id="dots-nav"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="volunteer-types">
-        <div class="volunteer-types-container">
-            <div class="volunteer-types-text-content">
-                <h1>
-                <span class="highlight-title">Unofficial Parallel Count Encoder (UPCE)</span>
-                </h1>
-                <p>
-                    The Unofficial Parallel Count Encoder (UPCE) is a tool designed to process and encode data 
-                    in parallel, improving efficiency and accuracy in counting and encoding tasks.
-                </p>
-                <p>
-                    What they do:
-                </p>
-                <ul>
-                    <li>Process Multiple Counts Simultaneously: Manages the encoding of multiple datasets at the same time to reduce processing time.</li>
-                    <li>Ensure Data Accuracy: Automatically checks for discrepancies and ensures reliable data encoding.</li>
-                    <li>Real-Time Data Handling: Updates information in real-time for faster reporting and decision-making.</li>
-                    <li>Maintain Data Integrity: Verifies consistency and prevents data errors during the encoding process.</li>
-                </ul>
-            </div>
-
-            <div class="image-section">
-                <div class="image-container">
-                    <div class="img-carousel">
-                        <img src="images/whoweare1.jpeg" class="active">
-                        <img src="images/whoweare2.jpg">
-                        <img src="images/whoweare3.jpg">
-                        <img src="images/whoweare4.jpg">
-                        <img src="images/whoweare5.jpeg">
-                    </div>
-                </div>
-
-                <div class="carousel-controls">
-                    <div class="nav-buttons">
-                        <button class="prev-btn">&lt;</button> <!-- Left Arrow -->
-                        <button class="next-btn">&gt;</button> <!-- Right Arrow -->
-                    </div>
-                    <div id="dots-nav"></div> <!-- Dots Navigation -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="volunteer-types">
-        <div class="volunteer-types-container">
-            <div class="volunteer-types-text-content">
-                <h1>
-                <span class="highlight-title">Unofficial Parallel Count Encoder (UPCE)</span>
-                </h1>
-                <p>
-                    The Unofficial Parallel Count Encoder (UPCE) is a tool designed to process and encode data 
-                    in parallel, improving efficiency and accuracy in counting and encoding tasks.
-                </p>
-                <p>
-                    What they do:
-                </p>
-                <ul>
-                    <li>Process Multiple Counts Simultaneously: Manages the encoding of multiple datasets at the same time to reduce processing time.</li>
-                    <li>Ensure Data Accuracy: Automatically checks for discrepancies and ensures reliable data encoding.</li>
-                    <li>Real-Time Data Handling: Updates information in real-time for faster reporting and decision-making.</li>
-                    <li>Maintain Data Integrity: Verifies consistency and prevents data errors during the encoding process.</li>
-                </ul>
-            </div>
-
-            <div class="image-section">
-                <div class="image-container">
-                    <div class="img-carousel">
-                        <img src="images/whoweare1.jpeg" class="active">
-                        <img src="images/whoweare2.jpg">
-                        <img src="images/whoweare3.jpg">
-                        <img src="images/whoweare4.jpg">
-                        <img src="images/whoweare5.jpeg">
-                    </div>
-                </div>
-
-                <div class="carousel-controls">
-                    <div class="nav-buttons">
-                        <button class="prev-btn">&lt;</button> <!-- Left Arrow -->
-                        <button class="next-btn">&gt;</button> <!-- Right Arrow -->
-                    </div>
-                    <div id="dots-nav"></div> <!-- Dots Navigation -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php include 'chatbotfolder/chatbot.php';?>
+    <?php include 'chatbotfolder/chatbot.php'; ?>
     <?php include 'footer.php'; ?>
 
     <script src="js/carousel.js"></script>
     <script>
-        document.getElementById('hamburger-icon').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active'); 
-    });
+        document.getElementById('hamburger-icon').addEventListener('click', function () {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
     </script>
+
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,23 @@
     <link rel="stylesheet" href="css/mission-vision.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <?php include("navbar.php"); ?>
 
     <div class="info-cards">
         <div class="card">
             <div class="card-icon">
-                <img src="img/mission.gif" alt="Mission"/> 
+                <img src="img/mission.gif" alt="Mission" />
             </div>
             <div class="card-title">Mission</div>
             <div class="card-content">
-            <p>Tulad ni Hesus, bukas na niyayakap ang bawat isa Lalo na ang pamilya at kabataan, 
-                masigasig na nakikinig, nangingilatis, at tumutugon sa daing ng mga nasa laylayan, sa iba't ibang sector, 
-                sa mga isyung panlipunan, at sangnilikha sa pamamagitan ng paghuhubog at pagpapatibay ng mga buhay at 
-                gising na BEC at iba pang pamayanan.</p>
+                <p>Tulad ni Hesus, bukas na niyayakap ang bawat isa Lalo na ang pamilya at kabataan,
+                    masigasig na nakikinig, nangingilatis, at tumutugon sa daing ng mga nasa laylayan, sa iba't ibang
+                    sector,
+                    sa mga isyung panlipunan, at sangnilikha sa pamamagitan ng paghuhubog at pagpapatibay ng mga buhay
+                    at
+                    gising na BEC at iba pang pamayanan.</p>
             </div>
         </div>
 
@@ -30,19 +34,23 @@
             </div>
             <div class="card-title">Vision</div>
             <div class="card-content">
-            <p>Tayo ay Bayan ng Diyos na may malalim na pananampalataya,nagmamalasakit, at nagkakaisang naglalakbay kasama si Hesus, sa patnubay 
-                ng Espiritu Santo, tungo sa pamamayani ng kagandahang-loob ng Diyos, kaisa ng Birheng Maria at ng ating patrong San Roque.</p>
+                <p>Tayo ay Bayan ng Diyos na may malalim na pananampalataya,nagmamalasakit, at nagkakaisang naglalakbay
+                    kasama si Hesus, sa patnubay
+                    ng Espiritu Santo, tungo sa pamamayani ng kagandahang-loob ng Diyos, kaisa ng Birheng Maria at ng
+                    ating patrong San Roque.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="card-icon">
-                <img src="img/values.gif" alt="Vision"/> 
+                <img src="img/values.gif" alt="Vision" />
             </div>
             <div class="card-title">Core Values</div>
             <div class="card-content">
-                <p>At DPPAM, our work is guided by a strong set of values that shape our commitment to fair and transparent elections. 
-                    These principles define how we operate and inspire our volunteers to uphold democracy with integrity and dedication.</p>
+                <p>At DPPAM, our work is guided by a strong set of values that shape our commitment to fair and
+                    transparent elections.
+                    These principles define how we operate and inspire our volunteers to uphold democracy with integrity
+                    and dedication.</p>
                 <ul>
                     <li>Integrity – Committed to honesty and transparency in all electoral processes.</li>
                     <li>Volunteerism – Empowering citizens to take an active role in democracy.</li>
@@ -62,15 +70,17 @@
             </p>
             <br>
             <p>
-                Sa halalan sa susunod na taon, mahalaga ang ating mga desisyon! 
-                Narito ang Sampung Utos sa Tamang Pagboto upang gabayan tayo sa pagpili ng mga lider na karapat-dapat sa ating mga boto:
+                Sa halalan sa susunod na taon, mahalaga ang ating mga desisyon!
+                Narito ang Sampung Utos sa Tamang Pagboto upang gabayan tayo sa pagpili ng mga lider na karapat-dapat sa
+                ating mga boto:
             </p>
             <br>
             <ul class="custom-numbering">
                 <li>Bumoto ayon sa iyong konsensya.</li>
                 <li>Igalang ang kapasiyahan ng iba sa pagpili ng kandidato.</li>
                 <li>Kilalanin ang pagkatao, kakayahan, at mga katangian ng kandidatong humihingi ng iyong boto.</li>
-                <li>Alamin at sikaping maunawaan ang mga usapin, plataporma, at programa ng mga kandidato at partidong tumatakbo.</li>
+                <li>Alamin at sikaping maunawaan ang mga usapin, plataporma, at programa ng mga kandidato at partidong
+                    tumatakbo.</li>
                 <li><strong>HUWAG IPAGBILI ANG IYONG BOTO!</strong></li>
                 <li>Huwag iboto ang kandidatong gamit ay guns, goons, at gold.</li>
                 <li>Huwag iboto ang kandidato na may rekord ng graft at corruption.</li>
@@ -78,43 +88,14 @@
                 <li>Huwag iboto ang kandidatong imoral at mabisyo sa kanyang personal na buhay.</li>
                 <li>Isaalang-alang ang kapakanan ng bayan sa pagpili ng kandidatong iboboto.</li>
             </ul>
-
-
-            <br>
         </div>
     </div>
 
-    <div class="mission-vision">
-        <div class="mission-vision-container">
-            <div class="mission-vision-text-content">
-                <div class="section-title">
-                    <h2>Our Mandate</h2>
-                </div>
-                
-                <p>
-                    <span class="highlight-smallblue">As the citizen’s arm of the Commission on Elections, PPCRV’s mandates 
-                        include the following:</span> 
-                </p>
-                <br>
-                <ul class="custom-checklist">
-                    <li>To continuously conduct voters’ education nationwide, especially in far-flung areas not reached by Comelec.</li>
-                    <li>To monitor the conduct of the elections (poll watching) and assist the voting populace in every polling precinct in the country.</li>
-                    <li>To conduct an unofficial parallel count of the electronic results. This is the centerfold of the PPCRV Command Center.</li>
-                </ul>
-            </div>
 
-            <div class="mission-vision-image-section">
-                <div class="mission-vision-image-container">
-                    <div class="img">
-                        <img src="img/mandate.jpg" alt="Mission and Vision">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php include 'chatbotfolder/chatbot.php';?>
+    <?php include 'chatbotfolder/chatbot.php'; ?>
     <?php include 'footer.php'; ?>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

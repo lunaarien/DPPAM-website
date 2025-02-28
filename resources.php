@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPPAM - Volunteer</title>
+    <title>Servify | DPPAM - Volunteer</title>
     <link rel="stylesheet" href="css/resources.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <?php include("navbar.php"); ?>
     <section class="resource">
@@ -17,7 +19,7 @@
                 </div>
                 <div class="resource-text">
                     <p class="description">
-                        Discover essential volunteer resources, guides, and tools to support your role, 
+                        Discover essential volunteer resources, guides, and tools to support your role,
                         enhance your experience and help you contribute effectively to our mission.
                     </p>
                 </div>
@@ -40,19 +42,20 @@
                                 <p>description</p>
                                 <a href="#">Learn More</a>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <?php include 'chatbotfolder/chatbot.php';?>
-    <?php include("footer.php");?>
+    <?php include 'chatbotfolder/chatbot.php'; ?>
+    <?php include("footer.php"); ?>
     <script>
-        document.getElementById('hamburger-icon').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active'); 
-    });
+        document.getElementById('hamburger-icon').addEventListener('click', function () {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
+
 </html>

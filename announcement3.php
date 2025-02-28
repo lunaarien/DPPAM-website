@@ -77,10 +77,12 @@
         </div>
     </section>
 
-    <?php include 'chatbotfolder/chatbot.php';?>
+    <?php include 'chatbotfolder/chatbot.php'; ?>
     <?php include 'footer.php'; ?>
 
-    <script src="js/sample.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/toggle.js"></script>
+    
     <script>
         document.getElementById('hamburger-icon').addEventListener('click', function() {
     const navLinks = document.getElementById('nav-links');

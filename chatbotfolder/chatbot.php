@@ -7,225 +7,245 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <title>Document</title>
 </head>
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    .chat-bot {
+        font-family: "Poppins", serif;
+        position: fixed;
+        bottom: 0px;
+        right: 10px;
+        z-index: 9999;
+    }
 
-        .chat-bot {
-            font-family: "Poppins", serif;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-        }
+    .chat-icon {
+        width: 40px;
+        height: 40px;
+        background-color: #f1f1f1;
+        box-shadow: 0;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, bottom 0.3s ease;
+        position: absolute;
+        bottom: 1rem;
+        right: .5rem;
+        animation: floatAnimation 1.5s ease-out infinite alternate;
+    }
 
-        .chat-icon {
-            width: 60px;
-            height: 60px;
-            background-color: #00A1E4;
-            box-shadow: 0;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.3s ease, bottom 0.3s ease;
-            position: absolute;
-            bottom: 1rem;
-            right: .5rem;
-            animation: floatAnimation 1.5s ease-out infinite alternate;
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
         }
+        100% {
+            transform: translateY(-3px); 
+        }
+    }
+    .chat-box {
+        width: 350px;
+        height: 450px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        margin-right: 10px;
+    }
+    .chat-header{
+        background-color: #007DAC;
+        display: flex;
+        color: #f1f1f1;
+    }
+    .chat-header img{
+        margin: 5px 0 0 5px;
+        width: 50px;
+        height: 50px;
+    }
+    .chat-header h4{
+        margin-left: 10px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .chat-content {
+        flex-grow: 1;
+        padding: 10px;
+        overflow-y: auto;
+        max-height: 450px;
+        margin-left: -10px;
+    }
 
-        @keyframes floatAnimation {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-10px); 
-            }
-        }
+    .message-container {
+        display: flex;
+        flex-direction: column;
+    }
 
-        .chat-icon.open {
-            bottom: 420px;
-        }
+    .user-message {
+        background-color: #007DAC;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 10px;
+        align-self: flex-end;
+        margin: 5px;
+        max-width: 80%;
+    }
 
-        .chat-icon:hover {
-            animation: none;
-            box-shadow: 0 0 10px rgba(110, 245, 255, 0.5);
-        }
+    .chat-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+        padding: 10px;
+        border-top: 1px solid #ccc;
+        max-height: 100px;
+    }
+    
 
-        .chat-box {
-            display: none;
-            width: 300px;
-            height: 400px;
-            background-color:rgb(171, 210, 255);
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: slideIn 0.3s ease;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            overflow-y: auto;
-        }
+    .chat-input input {
+        flex-grow: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
+    .chat-input button {
+        background-color: white; 
+        border: 1px solid #ccc;  
+        color: black; 
+        padding: 12px 12px;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        min-width: 300px;
+        max-width: 300px;
+    }
 
-        .chat-content {
-            padding: 10px;
-            height: 285px;
-            max-height: 285px;
-            overflow-y: auto;
-            flex-grow: 1;
-        }
+    .message-wrapper {
+        display: flex;
+        max-width: 80%;
+    }
 
-        .chat-input {
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-            flex-direction: column;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        }
+    .bot-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
-        .chat-input input {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            margin-right: 5px;
-        }
+    .user-wrapper {
+        flex-direction: row-reverse; 
+        align-self: flex-end;
+    }
 
-        .chat-input button {
-            padding: 8px 15px;
-            background-color: #00A1E4;
-            color: #fff;
-            font-weight: bolder;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+    .avatar-container {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+    }
 
-        .chat-box.closing {
-            animation: slideOut2 0.3s ease forwards;
-        }
+    .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
 
-        @keyframes slideOut2 {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(100%);
-            }
-        }
+    .chat-message {
+        padding: 10px 15px;
+        border-radius: 10px;
+        max-width: 70%;
+        word-wrap: break-word;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 12px;
+    }
 
-        .chat-box.opening {
-            animation: slideDown2 0.3s ease forwards;
-        }
+    .user-message {
+        background-color: #007DAC;
+        color: white;
+    }
 
-        @keyframes slideDown2 {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
+    .bot-message {
+        background-color:rgb(255, 255, 255);
+        color: black;
+        border: 1px solid #ccc;
+    }
 
-        .message-container {
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
+    .faq-container{
+        gap: 5px;
+    }
 
-        .chat-message {
-            max-width: 70%;
-            margin: 5px;
-            padding: 10px;
-            clear: both;
-            word-wrap: break-word;
-        }
+    .faqbut:hover {
+        background-color:rgb(255, 255, 255);
+    }
 
-        @keyframes slideInFromLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+    .chat-input p{
+        margin: 0 0 5px 0; 
+        padding: 0; 
+        font-weight: bold; 
+        font-size: 14px; 
+        color: #007DAC;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
-        @keyframes slideInFromRight {
-            from {
-                opacity: 0;
-                transform: translateX(100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
 
-        .user-message {
-            border-radius: 10px 10px 0 10px;
-            align-self: flex-end;
-            background-color:rgb(191, 235, 238);
-            color:rgb(0, 27, 39);
-            font-weight: bold;
-            font-size: 15px;
-            animation: slideInFromRight 0.5s ease forwards;
-        }
+    @media screen and (max-width: 768px) {
+    .chat-box{
+        width: 300px;
+        height: 400px;
+    }
 
-        .bot-message {
-            border-radius: 10px 10px 10px 0;
-            align-self: flex-start;
-            background-color: #00A1E4;
-            color: white;
-            font-size: 15px;
-            animation: slideInFromLeft 0.5s ease forwards;
-        }
+    .chat-icon {
+        width: 50px;
+        height: 50px;
+        bottom: 10px;
+        right: 10px;
+    }
 
-        .faq-container::-webkit-scrollbar {
-            height: 3px;
-        }
+    .chat-header h4 {
+        font-size: 10px;
+    }
 
-        .faq-container::-webkit-scrollbar-track {
-            background:rgb(171, 210, 255);
-        }
+    .chat-content {
+        padding: 8px;
+    }
 
-        .faq-container::-webkit-scrollbar-thumb {
-            background: #888;
-        }
+    .chat-input {
+        padding: 8px;
+        max-height: 100px;
+    }
 
-        .faq-container::-webkit-scrollbar-thumb:hover {
-            background: #555;
-            cursor: pointer;
-        }
+    .chat-input input {
+        width: 50%;
+        font-size: 8px;
+        padding: 0px;
+    }
 
-        .faqbut{
-            max-height: 40px;
-            width: auto;
-            white-space: nowrap;
-            margin: 0 5px 0 5px;
-            opacity: 1;
-            transition: background-color 0.3s ease, color 0.3s ease, opacity 0.5s ease;
-        }
+    .chat-input button {
+        min-width: 250px;
+        max-width: 250px;
+        padding: 8px;
+        font-size: 10px;
+    }
 
-        .faqbut:hover{
-            background-color: z ;
-            color: #183251;
-        }
+    .chat-input p{
+        margin: 0 0 5px 0; 
+        font-size: 11px; 
+    }
+
+}
+
 
 </style>
 </head>
@@ -241,156 +261,188 @@
 
     <div class="chat-bot">
         <div class="chat-icon" id="chat-icon">
-            <img id="chatbotpic" src="chatbotfolder/images/chatbot.png" onmouseenter="this.src='chatbotfolder/images/chatbot2.png'" onmouseleave="this.src='chatbotfolder/images/chatbot.png'" style="height: 50px; width: 50px; filter: invert();" alt="Chat Icon">
+        <img id="chatbotpic" src="chatbotfolder/images/chatimg.png" style="height: 30px; width: 30px;" alt="Chat Icon">
         </div>
         <div class="chat-box" id="chat-box">
+            <div class="chat-header">
+                <img src="chatbotfolder/images/chatbot.png" alt="">
+                <h4>DDPAM Chatbot</h4>
+            </div>
             <!-- Chat conversation content goes here -->
             <div class="chat-content" id="chat-content">
                 <div id="msgcon" class="message-container">
-
+                    <!-- Static Bot Message -->
+                    <div class="message-wrapper bot-wrapper">
+                        <div class="avatar-container">
+                            <img src="chatbotfolder/images/chatbot.png" alt="Bot Avatar" class="avatar">
+                        </div>
+                        <div class="chat-message bot-message">
+                            <span class="message-text">Hey there! How can I help you today?</span>
+                        </div>
+                    </div>
                 </div>
             </div>
     
             <div class="chat-input">
-                <p style="margin: 0 0 5px 0; padding: 0; font-weight: bold; font-size: 15px; color: #183251;">Ask me these questions!</p>
-                <div id="faqcon" class="faq-container" style="display: flex; width: 100%; padding: 0 2px 5px 5px; align-items: center; overflow-x: auto; overflow-y: hidden;">
-
+                <p id="faq-text">
+                    Ask me these questions!
+                </p>
+                <div id="faqcon" class="faq-container" style="display: flex; flex-direction: column; width: 100%; padding: 0 2px 5px 5px; align-items: center; overflow-x: hidden; overflow-y: auto;">
                 </div>
             </div>
+
         </div>
     </div>
 <script>
 
-function handleFAQClick(id, butts) {
+    function handleFAQClick(id, butts) {
+        fetch('chatbotfolder/index.php')
+        .then(response => response.json())
+        .then(data => {
+            const msgCon = document.getElementById('msgcon');
 
-    fetch('chatbotfolder/index.php') 
-    .then(response => response.json())
-    .then(data => {
+            // Create user message wrapper
+            const userWrapper = document.createElement('div');
+            userWrapper.classList.add('message-wrapper', 'user-wrapper');
 
-    const usermsg = document.createElement('div');
-    usermsg.classList.add('chat-message', 'user-message');
-    usermsg.textContent = `${data.question[id]}`;
-    
-    const botmsg = document.createElement('div');
-    botmsg.classList.add('chat-message', 'bot-message');
-    botmsg.textContent = `${data.answer[id]}`;
+            // User avatar container
+            const userAvatarContainer = document.createElement('div');
+            userAvatarContainer.classList.add('avatar-container');
 
-    document.getElementById('msgcon').appendChild(usermsg);
+            // User avatar
+            const userAvatar = document.createElement('img');
+            userAvatar.src = 'chatbotfolder/images/user (1).png'; // Replace with actual path
+            userAvatar.classList.add('avatar');
 
-    smoothScrollToBottom(document.getElementById('chat-content'));
+            // User message
+            const usermsg = document.createElement('div');
+            usermsg.classList.add('chat-message', 'user-message');
+            usermsg.textContent = data.question[id];
 
-    setTimeout(() => {
-        document.getElementById('msgcon').appendChild(botmsg);
-        smoothScrollToBottom(document.getElementById('chat-content'));
-    }, 1000);
-    butts.style.opacity = '0';
+            // Append elements
+            userAvatarContainer.appendChild(userAvatar);
+            userWrapper.appendChild(userAvatarContainer);
+            userWrapper.appendChild(usermsg);
+            msgCon.appendChild(userWrapper);
 
-    setTimeout(() => {
-        butts.remove();  
-        console.log('Remaining buttons: ', document.querySelectorAll('.faqbut').length);
+            smoothScrollToBottom(document.getElementById('chat-content'));
 
-    if (document.querySelectorAll('.faqbut').length === 0) {    
-        const faqConElement = document.getElementById('faqcon');
-        
-        if (faqConElement) {
-            console.log('Updating faqcon with the message');
-            faqConElement.innerHTML = `
-                <p style="text-align: center; color: #183251; margin: 0; font-size: 13px">
-                    Please contact our customer support if you have any concerns!
-                </p>
-            `;
-        } else {
-            console.log('faqcon element not found');
-        }
-    }
-}, 500);
-})
-.catch(err => console.error('Something is wong', err));
+            setTimeout(() => {
+                // Create bot message wrapper
+                const botWrapper = document.createElement('div');
+                botWrapper.classList.add('message-wrapper', 'bot-wrapper');
 
-}
+                // Bot avatar container
+                const botAvatarContainer = document.createElement('div');
+                botAvatarContainer.classList.add('avatar-container');
 
-document.addEventListener("DOMContentLoaded", function() {
+                // Bot avatar
+                const botAvatar = document.createElement('img');
+                botAvatar.src = 'chatbotfolder/images/chatbot.png'; // Replace with actual path
+                botAvatar.classList.add('avatar');
+
+                // Bot message
+                const botmsg = document.createElement('div');
+                botmsg.classList.add('chat-message', 'bot-message');
+                botmsg.innerHTML = data.answer[id];
+
+                // Append elements
+                botAvatarContainer.appendChild(botAvatar);
+                botWrapper.appendChild(botAvatarContainer);
+                botWrapper.appendChild(botmsg);
+                msgCon.appendChild(botWrapper);
+
+                smoothScrollToBottom(document.getElementById('chat-content'));
+            }, 1000);
+
+
+
+            butts.style.opacity = '0';
+
+            setTimeout(() => {
+            butts.remove();
+            console.log('Remaining buttons: ', document.querySelectorAll('.faqbut').length);
+
+            const faqTextElement = document.getElementById('faq-text');
+            if (document.querySelectorAll('.faqbut').length === 0) {
+                // Hide the faq-text if no buttons remain
+                if (faqTextElement) {
+                    faqTextElement.style.display = 'none';
+                }
+                
+                const faqConElement = document.getElementById('faqcon');
+                if (faqConElement) {
+                    console.log('Updating faqcon with the message');
+                    faqConElement.innerHTML = `
+                    <p style="text-align: center; color: #183251; margin: 0; font-size: 10px">
+                        For more questions, please contact us at 09283947182 or email us at dppam@gmail.com. You can also visit the nearest parish based on your location for assistance.
+                    </p>
+                `;
+                } else {
+                    console.log('faqcon element not found');
+                }
+            }
+            }, 500);
+            })
+                .catch(err => console.error('Something is wrong:', err));
+            }
+
+        document.addEventListener("DOMContentLoaded", function() {
         const chatIcon = document.getElementById("chat-icon");
         const chatBox = document.getElementById("chat-box");
         const chatbot = document.getElementById("chatbotpic"); 
-
-        chatIcon.addEventListener("click", function() {
-            if (chatBox.style.display === "block") {
-                chatBox.style.bottom = '-20px';
-                chatBox.classList.add("closing");
-                chatbot.onmouseenter = function oo() { chatbot.src='chatbotfolder/images/chatbot2.png' };
-                chatbot.onmouseleave = function pp() { chatbot.src='chatbotfolder/images/chatbot.png' };
-                setTimeout(() => {
-                    chatIcon.classList.remove("open");
-                    chatbot.src = 'chatbotfolder/images/chatbot.png';
-                }, 200);
-                setTimeout(function() {
-                    chatBox.style.display = "none";
-                }, 300); 
+        
+        chatIcon.addEventListener("click", function () {
+            if (chatBox.style.display === "none" || chatBox.style.display ===""){
+                chatBox.style.display ="flex";
+                chatbot.src ="chatbotfolder/images/chatimgclose.png";
             } else {
-                chatBox.style.bottom = '0';
-                chatBox.style.display = "block";
-                chatbot.onmouseenter = function oo() { chatbot.src='chatbotfolder/images/chatbot.png' };
-                chatbot.onmouseleave = function pp() { chatbot.src='chatbotfolder/images/chatbot2.png' };
-                chatBox.classList.remove("closing");
-                setTimeout(() => {
-                    chatIcon.classList.add("open");
-                    chatbot.src = 'chatbotfolder/images/chatbot2.png';
-                }, 200);
+                chatBox.style.display= "none";
+                chatbot.src ="chatbotfolder/images/chatimg.png";
             }
+        })
+        });
+        fetch('chatbotfolder/index.php')
+            .then(response => response.json())
+            .then(data => {
+            const faqText = document.getElementById('faq-text');
+
+                for (let e in data.question) document.getElementById('faqcon').insertAdjacentHTML('beforeend', `
+            <button onclick="handleFAQClick('${e}', this)" class="faqbut" id="faqbut">${data.question[e]}</button>`); 
         });
 
-        chatBox.addEventListener("animationend", function() {
-            if (!chatBox.style.display || chatBox.style.display === "block") {
-                chatBox.classList.remove("closing");
-                chatBox.style.bottom = '0';
+        function smoothScrollToBottom(element) {
+            // Get the current scroll position
+            const startScroll = element.scrollTop;
+            // Get the target scroll position (bottom of the element)
+            const targetScroll = element.scrollHeight - element.clientHeight;
+            // Calculate the distance to scroll
+            const distance = targetScroll - startScroll;
+            // Set the duration of the animation
+            const duration = 500; // in milliseconds
+            // Set the start time of the animation
+            const startTime = performance.now();
+
+            // Define the animation function
+            function scrollAnimation(currentTime) {
+                // Calculate the elapsed time since the start of the animation
+                const elapsedTime = currentTime - startTime;
+                // Calculate the progress of the animation (0 to 1)
+                const progress = Math.min(elapsedTime / duration, 1);
+                // Calculate the new scroll position based on the progress
+                const newScroll = startScroll + distance * progress;
+                // Scroll the element to the new position
+                element.scrollTop = newScroll;
+
+                // Continue the animation if not finished
+                if (progress < 1) {
+                    requestAnimationFrame(scrollAnimation);
+                }
             }
-        });
-    });
 
-    fetch('chatbotfolder/index.php') 
-    .then(response => response.json())
-    .then(data => {
-
-        for(let e in data.question) document.getElementById('faqcon').insertAdjacentHTML('beforeend', `
-            <button onclick="handleFAQClick('${e}', this)" class="faqbut" id="faqbut">${data.question[e]}</button>
-        `);
-
-    })
-    .catch(err => console.error('Something is wrong', err));
-    
-function smoothScrollToBottom(element) {
-        // Get the current scroll position
-        const startScroll = element.scrollTop;
-        // Get the target scroll position (bottom of the element)
-        const targetScroll = element.scrollHeight - element.clientHeight;
-        // Calculate the distance to scroll
-        const distance = targetScroll - startScroll;
-        // Set the duration of the animation
-        const duration = 500; // in milliseconds
-        // Set the start time of the animation
-        const startTime = performance.now();
-
-        // Define the animation function
-        function scrollAnimation(currentTime) {
-            // Calculate the elapsed time since the start of the animation
-            const elapsedTime = currentTime - startTime;
-            // Calculate the progress of the animation (0 to 1)
-            const progress = Math.min(elapsedTime / duration, 1);
-            // Calculate the new scroll position based on the progress
-            const newScroll = startScroll + distance * progress;
-            // Scroll the element to the new position
-            element.scrollTop = newScroll;
-
-            // Continue the animation if not finished
-            if (progress < 1) {
-                requestAnimationFrame(scrollAnimation);
-            }
+            // Start the animation
+            requestAnimationFrame(scrollAnimation);
         }
-
-        // Start the animation
-        requestAnimationFrame(scrollAnimation);
-    }
 
 </script> 
 </body>
