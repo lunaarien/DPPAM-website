@@ -19,7 +19,7 @@
                 <div class="news-content">
                     <h2 class="news-title"></h2>
                     <div class="news-meta">
-                        <p><i class="fas fa-calendar-alt"></i> February 10, 2025</p>
+                        <p><i class="fas fa-calendar-alt"></i></p>
                         <p><i class="fas fa-user"></i> By Juan Dela Cruz</p>
                     </div>
                     <p>The Diocese of Kalookan Public and Political Affairs Ministry (PPAM) - Parish Pastoral Council for Responsible Voting (PPCRV) 
