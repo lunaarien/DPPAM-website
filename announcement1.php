@@ -20,7 +20,7 @@
                     <h2 class="news-title"></h2>
                     <div class="news-meta">
                         <p><i class="fas fa-calendar-alt"></i></p>
-                        <p><i class="fas fa-user"></i> By Juan Dela Cruz</p>
+                        <p><i class="fas fa-user"></i></p>
                     </div>
                     <p>The Diocese of Kalookan Public and Political Affairs Ministry (PPAM) - Parish Pastoral Council for Responsible Voting (PPCRV) 
                         recently conducted a courtesy call with the Election Officers of Caloocan City’s three districts to strengthen collaboration 
