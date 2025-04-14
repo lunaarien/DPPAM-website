@@ -17,7 +17,7 @@
         <div class="news-container">
             <div class="left-box">
                 <div class="news-content">
-                    <h2 class="news-title">Diocese of Kalookan PPAM-PPCRV Meets with Caloocan Election Officers for 2025 Polls</h2>
+                    <h2 class="news-title"></h2>
                     <div class="news-meta">
                         <p><i class="fas fa-calendar-alt"></i> February 10, 2025</p>
                         <p><i class="fas fa-user"></i> By Juan Dela Cruz</p>
